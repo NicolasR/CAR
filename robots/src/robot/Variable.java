@@ -6,7 +6,6 @@
  */
 package robot;
 
-import java.lang.String;
 
 /**
  * <!-- begin-user-doc -->

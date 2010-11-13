@@ -11,25 +11,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
-import robot.Alternative;
-import robot.Backward;
-import robot.Condition;
-import robot.Different;
-import robot.Echo;
-import robot.Event;
-import robot.Forward;
-import robot.Mission;
-import robot.Movement;
-import robot.Operation;
-import robot.Operator;
-import robot.RobotPackage;
-import robot.Sensor;
-import robot.Sequence;
-import robot.TurnLeft;
-import robot.TurnRight;
-import robot.Values;
-import robot.Var;
-import robot.Variable;
+import robot.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -196,31 +178,31 @@ public class RobotSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RobotPackage.INTEGER: {
-				robot.Integer integer = (robot.Integer)theEObject;
-				T result = caseInteger(integer);
-				if (result == null) result = caseValues(integer);
+			case RobotPackage.TINTEGER: {
+				TInteger tInteger = (TInteger)theEObject;
+				T result = caseTInteger(tInteger);
+				if (result == null) result = caseValues(tInteger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RobotPackage.STRING: {
-				robot.String string = (robot.String)theEObject;
-				T result = caseString(string);
-				if (result == null) result = caseValues(string);
+			case RobotPackage.TSTRING: {
+				TString tString = (TString)theEObject;
+				T result = caseTString(tString);
+				if (result == null) result = caseValues(tString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RobotPackage.FLOAT: {
-				robot.Float float_ = (robot.Float)theEObject;
-				T result = caseFloat(float_);
-				if (result == null) result = caseValues(float_);
+			case RobotPackage.TFLOAT: {
+				TFloat tFloat = (TFloat)theEObject;
+				T result = caseTFloat(tFloat);
+				if (result == null) result = caseValues(tFloat);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RobotPackage.BOOLEAN: {
-				robot.Boolean boolean_ = (robot.Boolean)theEObject;
-				T result = caseBoolean(boolean_);
-				if (result == null) result = caseValues(boolean_);
+			case RobotPackage.TBOOLEAN: {
+				TBoolean tBoolean = (TBoolean)theEObject;
+				T result = caseTBoolean(tBoolean);
+				if (result == null) result = caseValues(tBoolean);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -458,62 +440,62 @@ public class RobotSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TInteger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TInteger</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInteger(robot.Integer object) {
+	public T caseTInteger(TInteger object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TString</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TString</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseString(robot.String object) {
+	public T caseTString(TString object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Float</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TFloat</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Float</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TFloat</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFloat(robot.Float object) {
+	public T caseTFloat(TFloat object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TBoolean</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TBoolean</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBoolean(robot.Boolean object) {
+	public T caseTBoolean(TBoolean object) {
 		return null;
 	}
 

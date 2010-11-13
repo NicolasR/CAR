@@ -101,23 +101,24 @@ public class EventImpl extends OperationImpl implements Event {
 	public void setCondition(Condition newCondition) {
 		eSet(RobotPackage.Literals.EVENT__CONDITION, newCondition);
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+	
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
 		String returnvalue = "";
-		
-		returnvalue += "at("+this.getCondition().toString()+")\n";
-		returnvalue += "{\n";
-		returnvalue += this.getAt().toString()+"\n";
-		returnvalue += "}\n";
-		returnvalue += "onleave\n";
-		returnvalue += "{\n";
-		returnvalue += this.getOnleave().toString()+"\n";
-		returnvalue += "};\n";
+	
+		returnvalue += indent+"at("+this.getCondition().toUrbiString()+")\n";
+		returnvalue += indent+"{\n";
+		returnvalue += this.getAt().toUrbiString(indent+"\t")+"\n";
+		returnvalue += indent+"}\n";
+		returnvalue += indent+"onleave\n";
+		returnvalue += indent+"{\n";
+		returnvalue += this.getOnleave().toUrbiString(indent+"\t")+"\n";
+		returnvalue += indent+"};";
 		return returnvalue;
 	}
+
 } //EventImpl

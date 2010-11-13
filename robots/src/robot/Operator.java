@@ -55,4 +55,6 @@ public interface Operator extends CDOObject {
 	 */
 	void setType(EOperator value);
 
+	String toUrbiString();
+
 } // Operator

@@ -62,21 +62,22 @@ public class SensorImpl extends ValuesImpl implements Sensor {
 	public void setName(ESensor newName) {
 		eSet(RobotPackage.Literals.SENSOR__NAME, newName);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString() {
 		String returnvalue = "";
 		ESensor sensor = this.getName();
 		if (sensor == ESensor.DISTANCE_FLF)
 			returnvalue = "distanceFLF.val";
 		else if (sensor == ESensor.DISTANCE_FRF)
 			returnvalue = "distanceFRF.val";
-
+	
 		return returnvalue;
 	}
+
 
 } //SensorImpl

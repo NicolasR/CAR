@@ -11,6 +11,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import robot.RobotPackage;
+import robot.TFloat;
+import robot.TInteger;
+import robot.TString;
 import robot.Values;
 
 /**
@@ -51,32 +54,31 @@ public class ValuesImpl extends CDOObjectImpl implements Values {
 	protected int eStaticFeatureCount() {
 		return 0;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString(){
+
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(){
 		String retour = "";
-		if (this instanceof robot.Integer)
+		if (this instanceof TInteger)
 		{
-			robot.Integer value = (robot.Integer)this;
+			TInteger value = (TInteger)this;
 			retour = value.getValue().toString();
 		}
-		else if (this instanceof robot.Float)
+		else if (this instanceof TFloat)
 		{
-			robot.Float value = (robot.Float)this;
+			TFloat value = (TFloat)this;
 			retour = Float.toString(value.getValue());
 		}
-		else if (this instanceof robot.String)
+		else if (this instanceof TString)
 		{
-			robot.String value = (robot.String)this;
+			TString value = (TString)this;
 			retour = value.toString();
 		}
 		else if (this instanceof robot.Sensor)
-			retour = ((robot.Sensor)this).toString();
+		retour = ((robot.Sensor)this).toString();
 		return retour;
 	}
-
 } //ValuesImpl

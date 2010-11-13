@@ -39,21 +39,20 @@ public class ForwardImpl extends MovementImpl implements Forward {
 	protected EClass eStaticClass() {
 		return RobotPackage.Literals.FORWARD;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
 		if (time > 0)
 		{
-			returnvalue = "sleep("+time+");\n";
+			returnvalue = indent+"sleep("+time+");\n";
 		}
-		returnvalue += "robot.forward();";
+		returnvalue += indent+"robot.forward();";
 		return returnvalue;
 	}
-
 } //ForwardImpl

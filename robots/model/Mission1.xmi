@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
-<robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0">
+<robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0" xsi:schemaLocation="http://robot/1.0 robot.ecore">
   <Sequence>
     <Operations xsi:type="robot:Var" Name="threshold">
-      <Value xsi:type="robot:Integer" Value="300"/>
+      <Value xsi:type="robot:TInteger" Value="300"/>
     </Operations>
     <Operations xsi:type="robot:Event">
       <At xsi:type="robot:Alternative">

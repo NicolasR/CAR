@@ -6,8 +6,6 @@
  */
 package robot.impl;
 
-import java.lang.Float;
-
 import org.eclipse.emf.ecore.EClass;
 
 import robot.Movement;

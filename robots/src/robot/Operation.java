@@ -20,4 +20,6 @@ import org.eclipse.emf.cdo.CDOObject;
  * @generated
  */
 public interface Operation extends CDOObject {
+
+	String toUrbiString(String string);
 } // Operation

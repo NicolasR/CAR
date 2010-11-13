@@ -55,17 +55,17 @@
     <genClasses ecoreClass="robot.ecore#//Sensor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Sensor/name"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//Integer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Integer/Value"/>
+    <genClasses ecoreClass="robot.ecore#//TInteger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//TInteger/Value"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//String">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//String/Value"/>
+    <genClasses ecoreClass="robot.ecore#//TString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//TString/Value"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//Float">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Float/Value"/>
+    <genClasses ecoreClass="robot.ecore#//TFloat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//TFloat/Value"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//Boolean">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Boolean/Value"/>
+    <genClasses ecoreClass="robot.ecore#//TBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//TBoolean/Value"/>
     </genClasses>
     <genClasses ecoreClass="robot.ecore#//Operator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Operator/type"/>

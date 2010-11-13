@@ -143,40 +143,40 @@ public interface RobotFactory extends EFactory {
 	Sensor createSensor();
 
 	/**
-	 * Returns a new object of class '<em>Integer</em>'.
+	 * Returns a new object of class '<em>TInteger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer</em>'.
+	 * @return a new object of class '<em>TInteger</em>'.
 	 * @generated
 	 */
-	Integer createInteger();
+	TInteger createTInteger();
 
 	/**
-	 * Returns a new object of class '<em>String</em>'.
+	 * Returns a new object of class '<em>TString</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String</em>'.
+	 * @return a new object of class '<em>TString</em>'.
 	 * @generated
 	 */
-	String createString();
+	TString createTString();
 
 	/**
-	 * Returns a new object of class '<em>Float</em>'.
+	 * Returns a new object of class '<em>TFloat</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Float</em>'.
+	 * @return a new object of class '<em>TFloat</em>'.
 	 * @generated
 	 */
-	Float createFloat();
+	TFloat createTFloat();
 
 	/**
-	 * Returns a new object of class '<em>Boolean</em>'.
+	 * Returns a new object of class '<em>TBoolean</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean</em>'.
+	 * @return a new object of class '<em>TBoolean</em>'.
 	 * @generated
 	 */
-	Boolean createBoolean();
+	TBoolean createTBoolean();
 
 	/**
 	 * Returns a new object of class '<em>Operator</em>'.

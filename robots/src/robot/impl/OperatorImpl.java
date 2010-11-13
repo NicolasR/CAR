@@ -7,6 +7,7 @@
 package robot.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import robot.EOperator;
@@ -74,12 +75,12 @@ public class OperatorImpl extends CDOObjectImpl implements Operator {
 		eSet(RobotPackage.Literals.OPERATOR__TYPE, newType);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString() {
 		String returnvalue = "";
 		EOperator type = this.getType();
 		if(type == EOperator.DIFF)

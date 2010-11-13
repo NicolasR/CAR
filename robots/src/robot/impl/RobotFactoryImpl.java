@@ -15,28 +15,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import robot.Alternative;
-import robot.Backward;
-import robot.Condition;
-import robot.Different;
-import robot.EOperator;
-import robot.ESensor;
-import robot.Echo;
-import robot.Event;
-import robot.Forward;
-import robot.Mission;
-import robot.Movement;
-import robot.Operation;
-import robot.Operator;
-import robot.RobotFactory;
-import robot.RobotPackage;
-import robot.Sensor;
-import robot.Sequence;
-import robot.TurnLeft;
-import robot.TurnRight;
-import robot.Values;
-import robot.Var;
-import robot.Variable;
+import robot.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -95,10 +74,10 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 			case RobotPackage.CONDITION: return (EObject)createCondition();
 			case RobotPackage.VALUES: return (EObject)createValues();
 			case RobotPackage.SENSOR: return (EObject)createSensor();
-			case RobotPackage.INTEGER: return (EObject)createInteger();
-			case RobotPackage.STRING: return (EObject)createString();
-			case RobotPackage.FLOAT: return (EObject)createFloat();
-			case RobotPackage.BOOLEAN: return (EObject)createBoolean();
+			case RobotPackage.TINTEGER: return (EObject)createTInteger();
+			case RobotPackage.TSTRING: return (EObject)createTString();
+			case RobotPackage.TFLOAT: return (EObject)createTFloat();
+			case RobotPackage.TBOOLEAN: return (EObject)createTBoolean();
 			case RobotPackage.OPERATOR: return (EObject)createOperator();
 			case RobotPackage.DIFFERENT: return (EObject)createDifferent();
 			case RobotPackage.ECHO: return (EObject)createEcho();
@@ -278,9 +257,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public robot.Integer createInteger() {
-		IntegerImpl integer = new IntegerImpl();
-		return integer;
+	public TInteger createTInteger() {
+		TIntegerImpl tInteger = new TIntegerImpl();
+		return tInteger;
 	}
 
 	/**
@@ -288,9 +267,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public robot.String createString() {
-		StringImpl string = new StringImpl();
-		return string;
+	public TString createTString() {
+		TStringImpl tString = new TStringImpl();
+		return tString;
 	}
 
 	/**
@@ -298,9 +277,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public robot.Float createFloat() {
-		FloatImpl float_ = new FloatImpl();
-		return float_;
+	public TFloat createTFloat() {
+		TFloatImpl tFloat = new TFloatImpl();
+		return tFloat;
 	}
 
 	/**
@@ -308,9 +287,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public robot.Boolean createBoolean() {
-		BooleanImpl boolean_ = new BooleanImpl();
-		return boolean_;
+	public TBoolean createTBoolean() {
+		TBooleanImpl tBoolean = new TBooleanImpl();
+		return tBoolean;
 	}
 
 	/**

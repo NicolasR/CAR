@@ -41,18 +41,18 @@ public class TurnRightImpl extends MovementImpl implements TurnRight {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
 		if (time > 0)
 		{
-			returnvalue = "sleep("+time+");\n";
+			returnvalue = indent+"sleep("+time+");\n";
 		}
-		returnvalue += "robot.turnRight();";
+		returnvalue += indent+"robot.turnRight();";
 		return returnvalue;
 	}
 } //TurnRightImpl

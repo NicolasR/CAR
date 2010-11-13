@@ -82,4 +82,4 @@ public class VarImpl extends OperationImpl implements Var {
 		eSet(RobotPackage.Literals.VAR__NAME, newName);
 	}
 
-}
+} //VarImpl

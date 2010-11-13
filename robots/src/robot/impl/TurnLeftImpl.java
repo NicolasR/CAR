@@ -40,19 +40,19 @@ public class TurnLeftImpl extends MovementImpl implements TurnLeft {
 		return RobotPackage.Literals.TURN_LEFT;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
 		if (time > 0)
 		{
-			returnvalue = "sleep("+time+");\n";
+			returnvalue = indent+"sleep("+time+");\n";
 		}
-		returnvalue += "robot.turnLeft();";
+		returnvalue += indent+"robot.turnLeft();";
 		return returnvalue;
 	}
-}
+} //TurnLeftImpl

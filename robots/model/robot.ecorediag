@@ -222,7 +222,7 @@
     <children xmi:type="notation:Node" xmi:id="_nIeYI-zXEd-EqKdC1Zvddg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_nIeYJOzXEd-EqKdC1Zvddg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_ny4AAOzXEd-EqKdC1Zvddg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="robot.ecore#//Integer/Value"/>
+        <element xmi:type="ecore:EAttribute" href="robot.ecore#//TInteger/Value"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ny4AAezXEd-EqKdC1Zvddg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_nIeYJezXEd-EqKdC1Zvddg"/>
@@ -235,14 +235,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_nIeYK-zXEd-EqKdC1Zvddg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_nIeYIezXEd-EqKdC1Zvddg" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="robot.ecore#//Integer"/>
+    <element xmi:type="ecore:EClass" href="robot.ecore#//TInteger"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nIeYIuzXEd-EqKdC1Zvddg" x="1037" y="-7"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_tBuDcOzXEd-EqKdC1Zvddg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_tB0KEOzXEd-EqKdC1Zvddg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_tB0KEezXEd-EqKdC1Zvddg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_uQN24OzXEd-EqKdC1Zvddg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="robot.ecore#//String/Value"/>
+        <element xmi:type="ecore:EAttribute" href="robot.ecore#//TString/Value"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_uQN24ezXEd-EqKdC1Zvddg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_tB0KEuzXEd-EqKdC1Zvddg"/>
@@ -255,14 +255,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_tB0KGOzXEd-EqKdC1Zvddg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_tBuDcezXEd-EqKdC1Zvddg" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="robot.ecore#//String"/>
+    <element xmi:type="ecore:EClass" href="robot.ecore#//TString"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tBuDcuzXEd-EqKdC1Zvddg" x="1051" y="-67"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_y5txkOzXEd-EqKdC1Zvddg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_y5txk-zXEd-EqKdC1Zvddg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_y5txlOzXEd-EqKdC1Zvddg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_2W0KkOzXEd-EqKdC1Zvddg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="robot.ecore#//Float/Value"/>
+        <element xmi:type="ecore:EAttribute" href="robot.ecore#//TFloat/Value"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_2W0KkezXEd-EqKdC1Zvddg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_y5txlezXEd-EqKdC1Zvddg"/>
@@ -275,14 +275,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_y5txm-zXEd-EqKdC1Zvddg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_y5txkezXEd-EqKdC1Zvddg" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="robot.ecore#//Float"/>
+    <element xmi:type="ecore:EClass" href="robot.ecore#//TFloat"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y5txkuzXEd-EqKdC1Zvddg" x="840" y="-125"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_34UZkOzXEd-EqKdC1Zvddg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_34UZk-zXEd-EqKdC1Zvddg" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_34UZlOzXEd-EqKdC1Zvddg" type="5001">
       <children xmi:type="notation:Node" xmi:id="_4vhuYOzXEd-EqKdC1Zvddg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="robot.ecore#//Boolean/Value"/>
+        <element xmi:type="ecore:EAttribute" href="robot.ecore#//TBoolean/Value"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_4vhuYezXEd-EqKdC1Zvddg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_34UZlezXEd-EqKdC1Zvddg"/>
@@ -295,7 +295,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_34UZm-zXEd-EqKdC1Zvddg"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_34UZkezXEd-EqKdC1Zvddg" fontColor="4210752" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="robot.ecore#//Boolean"/>
+    <element xmi:type="ecore:EClass" href="robot.ecore#//TBoolean"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_34UZkuzXEd-EqKdC1Zvddg" x="680" y="-115"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_FAw2gOzYEd-EqKdC1Zvddg" type="1001">

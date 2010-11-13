@@ -180,22 +180,22 @@ public class ConditionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.CONDITION__VARIABLE,
-				 RobotFactory.eINSTANCE.createInteger()));
+				 RobotFactory.eINSTANCE.createTInteger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.CONDITION__VARIABLE,
-				 RobotFactory.eINSTANCE.createString()));
+				 RobotFactory.eINSTANCE.createTString()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.CONDITION__VARIABLE,
-				 RobotFactory.eINSTANCE.createFloat()));
+				 RobotFactory.eINSTANCE.createTFloat()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.CONDITION__VARIABLE,
-				 RobotFactory.eINSTANCE.createBoolean()));
+				 RobotFactory.eINSTANCE.createTBoolean()));
 
 		newChildDescriptors.add
 			(createChildParameter

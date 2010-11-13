@@ -6,8 +6,6 @@
  */
 package robot.impl;
 
-import java.lang.String;
-
 import org.eclipse.emf.ecore.EClass;
 
 import robot.RobotPackage;
@@ -64,12 +62,12 @@ public class VariableImpl extends ValuesImpl implements Variable {
 		eSet(RobotPackage.Literals.VARIABLE__NAME, newName);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString() {
 		return this.getName();
 	}
 } //VariableImpl

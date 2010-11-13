@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
+import robot.Alternative;
 import robot.Backward;
 import robot.Echo;
 import robot.Event;
@@ -20,7 +21,6 @@ import robot.Sequence;
 import robot.TurnLeft;
 import robot.TurnRight;
 import robot.Var;
-import robot.Alternative;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,24 +60,24 @@ public class OperationImpl extends CDOObjectImpl implements Operation {
 	protected int eStaticFeatureCount() {
 		return 0;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString(){
+
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent){
 		String retour = "";
 		if (this instanceof Var)
 		{
 			Var variable = (Var) this;
-			String value = variable.getValue().toString();
+			String value = variable.getValue().toUrbiString();
 			retour = "var "+variable.getName()+" = "+value+";";
 		}
 		else if (this instanceof Echo)
 		{
 			Echo echo = (Echo)this;
-			String value = echo.getParam().toString();
+			String value = echo.getParam();
 			retour = "echo(\""+value+"\");";
 		}
 		else if (this instanceof Event)
@@ -92,27 +92,26 @@ public class OperationImpl extends CDOObjectImpl implements Operation {
 		}
 		else if (this instanceof TurnLeft)
 		{
-			retour = ((TurnLeft)this).toString();
+			retour = ((TurnLeft)this).toUrbiString(indent);
 		}
 		else if (this instanceof TurnRight)
 		{
-			retour = ((TurnRight)this).toString();
+			retour = ((TurnRight)this).toUrbiString(indent);
 		}
 		else if (this instanceof Backward)
 		{
-			retour = ((Backward)this).toString();
+			retour = ((Backward)this).toUrbiString(indent);
 		}
 		else if (this instanceof Forward)
 		{
-			retour = ((Forward)this).toString();
+		retour = ((Forward)this).toUrbiString(indent);
 		}
 		else if (this instanceof Sequence)
 		{
 			retour += "{\n";
-			retour += ((Sequence)this).toString();
+			retour += ((Sequence)this).toUrbiString(indent+"\t");
 			retour += "}";
 		}
 		return retour;
 	}
-
 } //OperationImpl

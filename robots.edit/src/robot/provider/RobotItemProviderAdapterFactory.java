@@ -375,95 +375,95 @@ public class RobotItemProviderAdapterFactory extends RobotAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link robot.Integer} instances.
+	 * This keeps track of the one adapter used for all {@link robot.TInteger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntegerItemProvider integerItemProvider;
+	protected TIntegerItemProvider tIntegerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link robot.Integer}.
+	 * This creates an adapter for a {@link robot.TInteger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIntegerAdapter() {
-		if (integerItemProvider == null) {
-			integerItemProvider = new IntegerItemProvider(this);
+	public Adapter createTIntegerAdapter() {
+		if (tIntegerItemProvider == null) {
+			tIntegerItemProvider = new TIntegerItemProvider(this);
 		}
 
-		return integerItemProvider;
+		return tIntegerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link robot.String} instances.
+	 * This keeps track of the one adapter used for all {@link robot.TString} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StringItemProvider stringItemProvider;
+	protected TStringItemProvider tStringItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link robot.String}.
+	 * This creates an adapter for a {@link robot.TString}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createStringAdapter() {
-		if (stringItemProvider == null) {
-			stringItemProvider = new StringItemProvider(this);
+	public Adapter createTStringAdapter() {
+		if (tStringItemProvider == null) {
+			tStringItemProvider = new TStringItemProvider(this);
 		}
 
-		return stringItemProvider;
+		return tStringItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link robot.Float} instances.
+	 * This keeps track of the one adapter used for all {@link robot.TFloat} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FloatItemProvider floatItemProvider;
+	protected TFloatItemProvider tFloatItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link robot.Float}.
+	 * This creates an adapter for a {@link robot.TFloat}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFloatAdapter() {
-		if (floatItemProvider == null) {
-			floatItemProvider = new FloatItemProvider(this);
+	public Adapter createTFloatAdapter() {
+		if (tFloatItemProvider == null) {
+			tFloatItemProvider = new TFloatItemProvider(this);
 		}
 
-		return floatItemProvider;
+		return tFloatItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link robot.Boolean} instances.
+	 * This keeps track of the one adapter used for all {@link robot.TBoolean} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BooleanItemProvider booleanItemProvider;
+	protected TBooleanItemProvider tBooleanItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link robot.Boolean}.
+	 * This creates an adapter for a {@link robot.TBoolean}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createBooleanAdapter() {
-		if (booleanItemProvider == null) {
-			booleanItemProvider = new BooleanItemProvider(this);
+	public Adapter createTBooleanAdapter() {
+		if (tBooleanItemProvider == null) {
+			tBooleanItemProvider = new TBooleanItemProvider(this);
 		}
 
-		return booleanItemProvider;
+		return tBooleanItemProvider;
 	}
 
 	/**
@@ -693,10 +693,10 @@ public class RobotItemProviderAdapterFactory extends RobotAdapterFactory impleme
 		if (conditionItemProvider != null) conditionItemProvider.dispose();
 		if (valuesItemProvider != null) valuesItemProvider.dispose();
 		if (sensorItemProvider != null) sensorItemProvider.dispose();
-		if (integerItemProvider != null) integerItemProvider.dispose();
-		if (stringItemProvider != null) stringItemProvider.dispose();
-		if (floatItemProvider != null) floatItemProvider.dispose();
-		if (booleanItemProvider != null) booleanItemProvider.dispose();
+		if (tIntegerItemProvider != null) tIntegerItemProvider.dispose();
+		if (tStringItemProvider != null) tStringItemProvider.dispose();
+		if (tFloatItemProvider != null) tFloatItemProvider.dispose();
+		if (tBooleanItemProvider != null) tBooleanItemProvider.dispose();
 		if (operatorItemProvider != null) operatorItemProvider.dispose();
 		if (differentItemProvider != null) differentItemProvider.dispose();
 		if (echoItemProvider != null) echoItemProvider.dispose();

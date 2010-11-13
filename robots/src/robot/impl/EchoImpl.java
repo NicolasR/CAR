@@ -6,8 +6,6 @@
  */
 package robot.impl;
 
-import java.lang.String;
-
 import org.eclipse.emf.ecore.EClass;
 
 import robot.Echo;

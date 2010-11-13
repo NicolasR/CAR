@@ -192,22 +192,22 @@ public class VarItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.VAR__VALUE,
-				 RobotFactory.eINSTANCE.createInteger()));
+				 RobotFactory.eINSTANCE.createTInteger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.VAR__VALUE,
-				 RobotFactory.eINSTANCE.createString()));
+				 RobotFactory.eINSTANCE.createTString()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.VAR__VALUE,
-				 RobotFactory.eINSTANCE.createFloat()));
+				 RobotFactory.eINSTANCE.createTFloat()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(RobotPackage.Literals.VAR__VALUE,
-				 RobotFactory.eINSTANCE.createBoolean()));
+				 RobotFactory.eINSTANCE.createTBoolean()));
 
 		newChildDescriptors.add
 			(createChildParameter

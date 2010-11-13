@@ -107,16 +107,16 @@ public class AlternativeImpl extends OperationImpl implements Alternative {
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String toString() {
-		String returnvalue = "";
-		
-		returnvalue += "if("+this.getCondition().toString()+")\n";
-		returnvalue += "{\n";
-		returnvalue += this.getConsequence().toString()+"\n";
-		returnvalue += "}\n";
-		returnvalue += "else\n";
-		returnvalue += this.getAlternative().toString()+"\n";
-		return returnvalue;
+	public String toUrbiString(String indent) {
+		 String returnvalue = "";
+
+		 returnvalue += indent+"if("+this.getCondition().toUrbiString()+")\n";
+		 returnvalue += indent+"{\n";
+		 returnvalue += this.getConsequence().toUrbiString(indent+"\t")+"\n";
+		 returnvalue += indent+"}\n";
+		 returnvalue += indent+"else\n";
+		 returnvalue += this.getAlternative().toUrbiString(indent+"\t")+"\n";
+		 return returnvalue;
 	}
 
 } //AlternativeImpl

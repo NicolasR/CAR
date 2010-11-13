@@ -126,30 +126,29 @@ public class ConditionImpl extends CDOObjectImpl implements Condition {
 	public void setOperator(Operator newOperator) {
 		eSet(RobotPackage.Literals.CONDITION__OPERATOR, newOperator);
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString() {
 		String returnvalue = "";
-		
+
 		EList<Values> listVariable = this.getVariable();
-		returnvalue += listVariable.get(0).toString()+" "+this.getOperator().toString()+" "+listVariable.get(1).toString();
+		returnvalue += listVariable.get(0).toUrbiString()+" "+this.getOperator().toUrbiString()+" "+listVariable.get(1).toUrbiString();
 		Condition ORCondition = this.getOR();
 		Condition ANDCondition = this.getAND();
-		
+
 		if (ORCondition != null)
 		{
-			returnvalue += " || "+ORCondition.toString();
+			returnvalue += " || "+ORCondition.toUrbiString();
 		}
 		if (ANDCondition != null)
 		{
-			returnvalue += " && "+ANDCondition.toString();
+			returnvalue += " && "+ANDCondition.toUrbiString();
 		}
-
+	
 		return returnvalue;
 	}
-
 } //ConditionImpl

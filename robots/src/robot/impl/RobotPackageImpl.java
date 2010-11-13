@@ -31,6 +31,10 @@ import robot.RobotFactory;
 import robot.RobotPackage;
 import robot.Sensor;
 import robot.Sequence;
+import robot.TBoolean;
+import robot.TFloat;
+import robot.TInteger;
+import robot.TString;
 import robot.TurnLeft;
 import robot.TurnRight;
 import robot.Values;
@@ -140,28 +144,28 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass integerEClass = null;
+	private EClass tIntegerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stringEClass = null;
+	private EClass tStringEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass floatEClass = null;
+	private EClass tFloatEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass booleanEClass = null;
+	private EClass tBooleanEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -521,8 +525,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInteger() {
-		return integerEClass;
+	public EClass getTInteger() {
+		return tIntegerEClass;
 	}
 
 	/**
@@ -530,8 +534,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInteger_Value() {
-		return (EAttribute)integerEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTInteger_Value() {
+		return (EAttribute)tIntegerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -539,8 +543,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getString() {
-		return stringEClass;
+	public EClass getTString() {
+		return tStringEClass;
 	}
 
 	/**
@@ -548,8 +552,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getString_Value() {
-		return (EAttribute)stringEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTString_Value() {
+		return (EAttribute)tStringEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -557,8 +561,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFloat() {
-		return floatEClass;
+	public EClass getTFloat() {
+		return tFloatEClass;
 	}
 
 	/**
@@ -566,8 +570,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFloat_Value() {
-		return (EAttribute)floatEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTFloat_Value() {
+		return (EAttribute)tFloatEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -575,8 +579,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBoolean() {
-		return booleanEClass;
+	public EClass getTBoolean() {
+		return tBooleanEClass;
 	}
 
 	/**
@@ -584,8 +588,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBoolean_Value() {
-		return (EAttribute)booleanEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTBoolean_Value() {
+		return (EAttribute)tBooleanEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -773,17 +777,17 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		sensorEClass = createEClass(SENSOR);
 		createEAttribute(sensorEClass, SENSOR__NAME);
 
-		integerEClass = createEClass(INTEGER);
-		createEAttribute(integerEClass, INTEGER__VALUE);
+		tIntegerEClass = createEClass(TINTEGER);
+		createEAttribute(tIntegerEClass, TINTEGER__VALUE);
 
-		stringEClass = createEClass(STRING);
-		createEAttribute(stringEClass, STRING__VALUE);
+		tStringEClass = createEClass(TSTRING);
+		createEAttribute(tStringEClass, TSTRING__VALUE);
 
-		floatEClass = createEClass(FLOAT);
-		createEAttribute(floatEClass, FLOAT__VALUE);
+		tFloatEClass = createEClass(TFLOAT);
+		createEAttribute(tFloatEClass, TFLOAT__VALUE);
 
-		booleanEClass = createEClass(BOOLEAN);
-		createEAttribute(booleanEClass, BOOLEAN__VALUE);
+		tBooleanEClass = createEClass(TBOOLEAN);
+		createEAttribute(tBooleanEClass, TBOOLEAN__VALUE);
 
 		operatorEClass = createEClass(OPERATOR);
 		createEAttribute(operatorEClass, OPERATOR__TYPE);
@@ -843,10 +847,10 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		alternativeEClass.getESuperTypes().add(this.getOperation());
 		eventEClass.getESuperTypes().add(this.getOperation());
 		sensorEClass.getESuperTypes().add(this.getValues());
-		integerEClass.getESuperTypes().add(this.getValues());
-		stringEClass.getESuperTypes().add(this.getValues());
-		floatEClass.getESuperTypes().add(this.getValues());
-		booleanEClass.getESuperTypes().add(this.getValues());
+		tIntegerEClass.getESuperTypes().add(this.getValues());
+		tStringEClass.getESuperTypes().add(this.getValues());
+		tFloatEClass.getESuperTypes().add(this.getValues());
+		tBooleanEClass.getESuperTypes().add(this.getValues());
 		differentEClass.getESuperTypes().add(this.getOperator());
 		echoEClass.getESuperTypes().add(this.getOperation());
 		varEClass.getESuperTypes().add(this.getOperation());
@@ -885,7 +889,7 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCondition_AND(), this.getCondition(), null, "AND", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCondition_OR(), this.getCondition(), null, "OR", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_Variable(), this.getValues(), null, "Variable", null, 1, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondition_Variable(), this.getValues(), null, "Variable", null, 2, 2, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCondition_Operator(), this.getOperator(), null, "Operator", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(valuesEClass, Values.class, "Values", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -893,17 +897,17 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEClass(sensorEClass, Sensor.class, "Sensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSensor_Name(), this.getESensor(), "name", null, 0, 1, Sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(integerEClass, robot.Integer.class, "Integer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInteger_Value(), ecorePackage.getEIntegerObject(), "Value", null, 0, 1, robot.Integer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tIntegerEClass, TInteger.class, "TInteger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTInteger_Value(), ecorePackage.getEIntegerObject(), "Value", null, 0, 1, TInteger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(stringEClass, robot.String.class, "String", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getString_Value(), ecorePackage.getEString(), "Value", null, 0, 1, robot.String.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tStringEClass, TString.class, "TString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTString_Value(), ecorePackage.getEString(), "Value", null, 0, 1, TString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(floatEClass, robot.Float.class, "Float", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFloat_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, robot.Float.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tFloatEClass, TFloat.class, "TFloat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTFloat_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, TFloat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(booleanEClass, robot.Boolean.class, "Boolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBoolean_Value(), ecorePackage.getEBoolean(), "Value", null, 0, 1, robot.Boolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tBooleanEClass, TBoolean.class, "TBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTBoolean_Value(), ecorePackage.getEBoolean(), "Value", null, 0, 1, TBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, Operator.class, "Operator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperator_Type(), this.getEOperator(), "type", null, 0, 1, Operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

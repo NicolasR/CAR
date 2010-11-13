@@ -6,8 +6,6 @@
  */
 package robot;
 
-import java.lang.String;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -472,14 +470,14 @@ public interface RobotPackage extends EPackage {
 	int SENSOR_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link robot.impl.IntegerImpl <em>Integer</em>}' class.
+	 * The meta object id for the '{@link robot.impl.TIntegerImpl <em>TInteger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see robot.impl.IntegerImpl
-	 * @see robot.impl.RobotPackageImpl#getInteger()
+	 * @see robot.impl.TIntegerImpl
+	 * @see robot.impl.RobotPackageImpl#getTInteger()
 	 * @generated
 	 */
-	int INTEGER = 13;
+	int TINTEGER = 13;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -488,26 +486,26 @@ public interface RobotPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER__VALUE = VALUES_FEATURE_COUNT + 0;
+	int TINTEGER__VALUE = VALUES_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Integer</em>' class.
+	 * The number of structural features of the '<em>TInteger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
+	int TINTEGER_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link robot.impl.StringImpl <em>String</em>}' class.
+	 * The meta object id for the '{@link robot.impl.TStringImpl <em>TString</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see robot.impl.StringImpl
-	 * @see robot.impl.RobotPackageImpl#getString()
+	 * @see robot.impl.TStringImpl
+	 * @see robot.impl.RobotPackageImpl#getTString()
 	 * @generated
 	 */
-	int STRING = 14;
+	int TSTRING = 14;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -516,26 +514,26 @@ public interface RobotPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING__VALUE = VALUES_FEATURE_COUNT + 0;
+	int TSTRING__VALUE = VALUES_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>String</em>' class.
+	 * The number of structural features of the '<em>TString</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
+	int TSTRING_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link robot.impl.FloatImpl <em>Float</em>}' class.
+	 * The meta object id for the '{@link robot.impl.TFloatImpl <em>TFloat</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see robot.impl.FloatImpl
-	 * @see robot.impl.RobotPackageImpl#getFloat()
+	 * @see robot.impl.TFloatImpl
+	 * @see robot.impl.RobotPackageImpl#getTFloat()
 	 * @generated
 	 */
-	int FLOAT = 15;
+	int TFLOAT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -544,26 +542,26 @@ public interface RobotPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT__VALUE = VALUES_FEATURE_COUNT + 0;
+	int TFLOAT__VALUE = VALUES_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Float</em>' class.
+	 * The number of structural features of the '<em>TFloat</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
+	int TFLOAT_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link robot.impl.BooleanImpl <em>Boolean</em>}' class.
+	 * The meta object id for the '{@link robot.impl.TBooleanImpl <em>TBoolean</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see robot.impl.BooleanImpl
-	 * @see robot.impl.RobotPackageImpl#getBoolean()
+	 * @see robot.impl.TBooleanImpl
+	 * @see robot.impl.RobotPackageImpl#getTBoolean()
 	 * @generated
 	 */
-	int BOOLEAN = 16;
+	int TBOOLEAN = 16;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -572,16 +570,16 @@ public interface RobotPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN__VALUE = VALUES_FEATURE_COUNT + 0;
+	int TBOOLEAN__VALUE = VALUES_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Boolean</em>' class.
+	 * The number of structural features of the '<em>TBoolean</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
+	int TBOOLEAN_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link robot.impl.OperatorImpl <em>Operator</em>}' class.
@@ -1047,88 +1045,88 @@ public interface RobotPackage extends EPackage {
 	EAttribute getSensor_Name();
 
 	/**
-	 * Returns the meta object for class '{@link robot.Integer <em>Integer</em>}'.
+	 * Returns the meta object for class '{@link robot.TInteger <em>TInteger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Integer</em>'.
-	 * @see robot.Integer
+	 * @return the meta object for class '<em>TInteger</em>'.
+	 * @see robot.TInteger
 	 * @generated
 	 */
-	EClass getInteger();
+	EClass getTInteger();
 
 	/**
-	 * Returns the meta object for the attribute '{@link robot.Integer#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link robot.TInteger#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see robot.Integer#getValue()
-	 * @see #getInteger()
+	 * @see robot.TInteger#getValue()
+	 * @see #getTInteger()
 	 * @generated
 	 */
-	EAttribute getInteger_Value();
+	EAttribute getTInteger_Value();
 
 	/**
-	 * Returns the meta object for class '{@link robot.String <em>String</em>}'.
+	 * Returns the meta object for class '{@link robot.TString <em>TString</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String</em>'.
-	 * @see robot.String
+	 * @return the meta object for class '<em>TString</em>'.
+	 * @see robot.TString
 	 * @generated
 	 */
-	EClass getString();
+	EClass getTString();
 
 	/**
-	 * Returns the meta object for the attribute '{@link robot.String#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see robot.String#getValue()
-	 * @see #getString()
-	 * @generated
-	 */
-	EAttribute getString_Value();
-
-	/**
-	 * Returns the meta object for class '{@link robot.Float <em>Float</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Float</em>'.
-	 * @see robot.Float
-	 * @generated
-	 */
-	EClass getFloat();
-
-	/**
-	 * Returns the meta object for the attribute '{@link robot.Float#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link robot.TString#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see robot.Float#getValue()
-	 * @see #getFloat()
+	 * @see robot.TString#getValue()
+	 * @see #getTString()
 	 * @generated
 	 */
-	EAttribute getFloat_Value();
+	EAttribute getTString_Value();
 
 	/**
-	 * Returns the meta object for class '{@link robot.Boolean <em>Boolean</em>}'.
+	 * Returns the meta object for class '{@link robot.TFloat <em>TFloat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean</em>'.
-	 * @see robot.Boolean
+	 * @return the meta object for class '<em>TFloat</em>'.
+	 * @see robot.TFloat
 	 * @generated
 	 */
-	EClass getBoolean();
+	EClass getTFloat();
 
 	/**
-	 * Returns the meta object for the attribute '{@link robot.Boolean#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link robot.TFloat#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see robot.Boolean#isValue()
-	 * @see #getBoolean()
+	 * @see robot.TFloat#getValue()
+	 * @see #getTFloat()
 	 * @generated
 	 */
-	EAttribute getBoolean_Value();
+	EAttribute getTFloat_Value();
+
+	/**
+	 * Returns the meta object for class '{@link robot.TBoolean <em>TBoolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TBoolean</em>'.
+	 * @see robot.TBoolean
+	 * @generated
+	 */
+	EClass getTBoolean();
+
+	/**
+	 * Returns the meta object for the attribute '{@link robot.TBoolean#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see robot.TBoolean#isValue()
+	 * @see #getTBoolean()
+	 * @generated
+	 */
+	EAttribute getTBoolean_Value();
 
 	/**
 	 * Returns the meta object for class '{@link robot.Operator <em>Operator</em>}'.
@@ -1531,14 +1529,14 @@ public interface RobotPackage extends EPackage {
 		EAttribute SENSOR__NAME = eINSTANCE.getSensor_Name();
 
 		/**
-		 * The meta object literal for the '{@link robot.impl.IntegerImpl <em>Integer</em>}' class.
+		 * The meta object literal for the '{@link robot.impl.TIntegerImpl <em>TInteger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see robot.impl.IntegerImpl
-		 * @see robot.impl.RobotPackageImpl#getInteger()
+		 * @see robot.impl.TIntegerImpl
+		 * @see robot.impl.RobotPackageImpl#getTInteger()
 		 * @generated
 		 */
-		EClass INTEGER = eINSTANCE.getInteger();
+		EClass TINTEGER = eINSTANCE.getTInteger();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1546,35 +1544,17 @@ public interface RobotPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INTEGER__VALUE = eINSTANCE.getInteger_Value();
+		EAttribute TINTEGER__VALUE = eINSTANCE.getTInteger_Value();
 
 		/**
-		 * The meta object literal for the '{@link robot.impl.StringImpl <em>String</em>}' class.
+		 * The meta object literal for the '{@link robot.impl.TStringImpl <em>TString</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see robot.impl.StringImpl
-		 * @see robot.impl.RobotPackageImpl#getString()
+		 * @see robot.impl.TStringImpl
+		 * @see robot.impl.RobotPackageImpl#getTString()
 		 * @generated
 		 */
-		EClass STRING = eINSTANCE.getString();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STRING__VALUE = eINSTANCE.getString_Value();
-
-		/**
-		 * The meta object literal for the '{@link robot.impl.FloatImpl <em>Float</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see robot.impl.FloatImpl
-		 * @see robot.impl.RobotPackageImpl#getFloat()
-		 * @generated
-		 */
-		EClass FLOAT = eINSTANCE.getFloat();
+		EClass TSTRING = eINSTANCE.getTString();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1582,17 +1562,17 @@ public interface RobotPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FLOAT__VALUE = eINSTANCE.getFloat_Value();
+		EAttribute TSTRING__VALUE = eINSTANCE.getTString_Value();
 
 		/**
-		 * The meta object literal for the '{@link robot.impl.BooleanImpl <em>Boolean</em>}' class.
+		 * The meta object literal for the '{@link robot.impl.TFloatImpl <em>TFloat</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see robot.impl.BooleanImpl
-		 * @see robot.impl.RobotPackageImpl#getBoolean()
+		 * @see robot.impl.TFloatImpl
+		 * @see robot.impl.RobotPackageImpl#getTFloat()
 		 * @generated
 		 */
-		EClass BOOLEAN = eINSTANCE.getBoolean();
+		EClass TFLOAT = eINSTANCE.getTFloat();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1600,7 +1580,25 @@ public interface RobotPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOLEAN__VALUE = eINSTANCE.getBoolean_Value();
+		EAttribute TFLOAT__VALUE = eINSTANCE.getTFloat_Value();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.TBooleanImpl <em>TBoolean</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.TBooleanImpl
+		 * @see robot.impl.RobotPackageImpl#getTBoolean()
+		 * @generated
+		 */
+		EClass TBOOLEAN = eINSTANCE.getTBoolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TBOOLEAN__VALUE = eINSTANCE.getTBoolean_Value();
 
 		/**
 		 * The meta object literal for the '{@link robot.impl.OperatorImpl <em>Operator</em>}' class.

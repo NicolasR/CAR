@@ -39,21 +39,20 @@ public class BackwardImpl extends MovementImpl implements Backward {
 	protected EClass eStaticClass() {
 		return RobotPackage.Literals.BACKWARD;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public String toString() {
+
+	 /**
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
 		if (time > 0)
 		{
-			returnvalue = "sleep("+time+");\n";
+			returnvalue = indent+"sleep("+time+");\n";
 		}
-		returnvalue += "robot.backward();";
+		returnvalue += indent+"robot.backward();";
 		return returnvalue;
 	}
-
 } //BackwardImpl

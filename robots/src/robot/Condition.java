@@ -94,7 +94,7 @@ public interface Condition extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable</em>' containment reference list.
 	 * @see robot.RobotPackage#getCondition_Variable()
-	 * @model containment="true" required="true"
+	 * @model containment="true" lower="2" upper="2"
 	 * @generated
 	 */
 	EList<Values> getVariable();
@@ -124,5 +124,7 @@ public interface Condition extends CDOObject {
 	 * @generated
 	 */
 	void setOperator(Operator value);
+
+	String toUrbiString();
 
 } // Condition

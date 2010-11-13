@@ -13,25 +13,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import robot.Alternative;
-import robot.Backward;
-import robot.Condition;
-import robot.Different;
-import robot.Echo;
-import robot.Event;
-import robot.Forward;
-import robot.Mission;
-import robot.Movement;
-import robot.Operation;
-import robot.Operator;
-import robot.RobotPackage;
-import robot.Sensor;
-import robot.Sequence;
-import robot.TurnLeft;
-import robot.TurnRight;
-import robot.Values;
-import robot.Var;
-import robot.Variable;
+import robot.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -142,20 +124,20 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 				return createSensorAdapter();
 			}
 			@Override
-			public Adapter caseInteger(robot.Integer object) {
-				return createIntegerAdapter();
+			public Adapter caseTInteger(TInteger object) {
+				return createTIntegerAdapter();
 			}
 			@Override
-			public Adapter caseString(robot.String object) {
-				return createStringAdapter();
+			public Adapter caseTString(TString object) {
+				return createTStringAdapter();
 			}
 			@Override
-			public Adapter caseFloat(robot.Float object) {
-				return createFloatAdapter();
+			public Adapter caseTFloat(TFloat object) {
+				return createTFloatAdapter();
 			}
 			@Override
-			public Adapter caseBoolean(robot.Boolean object) {
-				return createBooleanAdapter();
+			public Adapter caseTBoolean(TBoolean object) {
+				return createTBooleanAdapter();
 			}
 			@Override
 			public Adapter caseOperator(Operator object) {
@@ -380,58 +362,58 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.Integer <em>Integer</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.TInteger <em>TInteger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.Integer
+	 * @see robot.TInteger
 	 * @generated
 	 */
-	public Adapter createIntegerAdapter() {
+	public Adapter createTIntegerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.String <em>String</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.TString <em>TString</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.String
+	 * @see robot.TString
 	 * @generated
 	 */
-	public Adapter createStringAdapter() {
+	public Adapter createTStringAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.Float <em>Float</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.TFloat <em>TFloat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.Float
+	 * @see robot.TFloat
 	 * @generated
 	 */
-	public Adapter createFloatAdapter() {
+	public Adapter createTFloatAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.Boolean <em>Boolean</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.TBoolean <em>TBoolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.Boolean
+	 * @see robot.TBoolean
 	 * @generated
 	 */
-	public Adapter createBooleanAdapter() {
+	public Adapter createTBooleanAdapter() {
 		return null;
 	}
 
