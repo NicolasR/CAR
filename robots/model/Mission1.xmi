@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0">
+  <Sequence>
+    <Operations xsi:type="robot:Var" Name="threshold">
+      <Value xsi:type="robot:Integer" Value="300"/>
+    </Operations>
+    <Operations xsi:type="robot:Event">
+      <At xsi:type="robot:Alternative">
+        <Consequence xsi:type="robot:TurnRight" duration="-1.0"/>
+        <Alternative xsi:type="robot:TurnLeft" duration="-1.0"/>
+        <Condition>
+          <Variable xsi:type="robot:Sensor"/>
+          <Variable xsi:type="robot:Sensor" name="distanceFRF"/>
+          <Operator/>
+        </Condition>
+      </At>
+      <Onleave xsi:type="robot:Forward" duration="0.0020"/>
+      <Condition>
+        <OR>
+          <Variable xsi:type="robot:Sensor" name="distanceFRF"/>
+          <Variable xsi:type="robot:Variable" Name="threshold"/>
+          <Operator/>
+        </OR>
+        <Variable xsi:type="robot:Sensor"/>
+        <Variable xsi:type="robot:Variable" Name="threshold"/>
+        <Operator/>
+      </Condition>
+    </Operations>
+    <Operations xsi:type="robot:Forward"/>
+  </Sequence>
+</robot:Mission>
