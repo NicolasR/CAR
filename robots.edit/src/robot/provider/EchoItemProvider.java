@@ -62,7 +62,6 @@ public class EchoItemProvider
 			super.getPropertyDescriptors(object);
 
 			addParamPropertyDescriptor(object);
-			addEReference0PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,28 +84,6 @@ public class EchoItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the EReference0 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEReference0PropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Echo_EReference0_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Echo_EReference0_feature", "_UI_Echo_type"),
-				 RobotPackage.Literals.ECHO__EREFERENCE0,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

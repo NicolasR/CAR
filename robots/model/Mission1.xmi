@@ -6,8 +6,18 @@
     </Operations>
     <Operations xsi:type="robot:Event">
       <At xsi:type="robot:Alternative">
-        <Consequence xsi:type="robot:TurnRight" duration="-1.0"/>
-        <Alternative xsi:type="robot:TurnLeft" duration="-1.0"/>
+        <Consequence xsi:type="robot:Sequence">
+          <Operations xsi:type="robot:Echo" param="DROITE!!!"/>
+          <Operations xsi:type="robot:Backward" duration="1.0"/>
+          <Operations xsi:type="robot:TurnRight" duration="1.0"/>
+          <Operations xsi:type="robot:Forward"/>
+        </Consequence>
+        <Alternative xsi:type="robot:Sequence">
+          <Operations xsi:type="robot:Backward" duration="1.0"/>
+          <Operations xsi:type="robot:Echo" param="GAUCHE!!!"/>
+          <Operations xsi:type="robot:TurnLeft" duration="1.0"/>
+          <Operations xsi:type="robot:Forward"/>
+        </Alternative>
         <Condition>
           <Variable xsi:type="robot:Sensor"/>
           <Variable xsi:type="robot:Sensor" name="distanceFRF"/>
@@ -26,6 +36,8 @@
         <Operator/>
       </Condition>
     </Operations>
+    <Operations xsi:type="robot:Forward" duration="1.0"/>
+    <Operations xsi:type="robot:Backward" duration="1.0"/>
     <Operations xsi:type="robot:Forward"/>
   </Sequence>
 </robot:Mission>

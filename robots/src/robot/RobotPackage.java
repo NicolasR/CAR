@@ -657,22 +657,13 @@ public interface RobotPackage extends EPackage {
 	int ECHO__PARAM = OPERATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>EReference0</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECHO__EREFERENCE0 = OPERATION_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Echo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECHO_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 2;
+	int ECHO_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link robot.impl.VarImpl <em>Var</em>}' class.
@@ -1181,17 +1172,6 @@ public interface RobotPackage extends EPackage {
 	EAttribute getEcho_Param();
 
 	/**
-	 * Returns the meta object for the reference '{@link robot.Echo#getEReference0 <em>EReference0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>EReference0</em>'.
-	 * @see robot.Echo#getEReference0()
-	 * @see #getEcho()
-	 * @generated
-	 */
-	EReference getEcho_EReference0();
-
-	/**
 	 * Returns the meta object for class '{@link robot.Var <em>Var</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1645,14 +1625,6 @@ public interface RobotPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ECHO__PARAM = eINSTANCE.getEcho_Param();
-
-		/**
-		 * The meta object literal for the '<em><b>EReference0</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ECHO__EREFERENCE0 = eINSTANCE.getEcho_EReference0();
 
 		/**
 		 * The meta object literal for the '{@link robot.impl.VarImpl <em>Var</em>}' class.

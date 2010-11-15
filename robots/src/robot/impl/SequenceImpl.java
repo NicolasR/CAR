@@ -57,4 +57,5 @@ public class SequenceImpl extends OperationImpl implements Sequence {
 		return (EList<Operation>)eGet(RobotPackage.Literals.SEQUENCE__OPERATIONS, true);
 	}
 
+
 } //SequenceImpl

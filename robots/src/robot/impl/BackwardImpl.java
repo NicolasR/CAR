@@ -48,11 +48,13 @@ public class BackwardImpl extends MovementImpl implements Backward {
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
+
+		returnvalue += indent+"robot.backward();";
 		if (time > 0)
 		{
-			returnvalue = indent+"sleep("+time+");\n";
+			returnvalue += "\n" + indent+"sleep("+time+");\n";
+			returnvalue += indent+"robot.wheels.speed = 0;\n";
 		}
-		returnvalue += indent+"robot.backward();";
 		return returnvalue;
 	}
 } //BackwardImpl

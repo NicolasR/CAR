@@ -20,7 +20,6 @@ import robot.RobotPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link robot.impl.EchoImpl#getParam <em>Param</em>}</li>
- *   <li>{@link robot.impl.EchoImpl#getEReference0 <em>EReference0</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,24 +61,6 @@ public class EchoImpl extends OperationImpl implements Echo {
 	 */
 	public void setParam(String newParam) {
 		eSet(RobotPackage.Literals.ECHO__PARAM, newParam);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Operation getEReference0() {
-		return (Operation)eGet(RobotPackage.Literals.ECHO__EREFERENCE0, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEReference0(Operation newEReference0) {
-		eSet(RobotPackage.Literals.ECHO__EREFERENCE0, newEReference0);
 	}
 
 } //EchoImpl

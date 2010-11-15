@@ -72,13 +72,13 @@ public class OperationImpl extends CDOObjectImpl implements Operation {
 		{
 			Var variable = (Var) this;
 			String value = variable.getValue().toUrbiString();
-			retour = "var "+variable.getName()+" = "+value+";";
+			retour = indent + "var "+variable.getName()+" = "+value+";";
 		}
 		else if (this instanceof Echo)
 		{
 			Echo echo = (Echo)this;
 			String value = echo.getParam();
-			retour = "echo(\""+value+"\");";
+			retour = indent + "echo(\""+value+"\");\n";
 		}
 		else if (this instanceof Event)
 		{
@@ -108,9 +108,11 @@ public class OperationImpl extends CDOObjectImpl implements Operation {
 		}
 		else if (this instanceof Sequence)
 		{
-			retour += "{\n";
-			retour += ((Sequence)this).toUrbiString(indent+"\t");
-			retour += "}";
+			retour += indent + "{\n";
+			for (Operation ope : ((Sequence)this).getOperations()) {
+				retour+= ope.toUrbiString(indent+"\t");
+			}
+			retour += "\n" + indent + "}";
 		}
 		return retour;
 	}

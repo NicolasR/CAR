@@ -48,11 +48,13 @@ public class ForwardImpl extends MovementImpl implements Forward {
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
+
+		returnvalue += indent+"robot.forward();";
 		if (time > 0)
 		{
-			returnvalue = indent+"sleep("+time+");\n";
+			returnvalue += "\n" + indent+"sleep("+time+");\n";
+			returnvalue += indent+"robot.wheels.speed = 0;\n";
 		}
-		returnvalue += indent+"robot.forward();";
 		return returnvalue;
 	}
 } //ForwardImpl
