@@ -8,30 +8,29 @@ package robot.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import robot.Echo;
-import robot.Operation;
 import robot.RobotPackage;
+import robot.TInteger;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Echo</b></em>'.
+ * An implementation of the model object '<em><b>TInteger</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link robot.impl.EchoImpl#getParam <em>Param</em>}</li>
+ *   <li>{@link robot.impl.TIntegerImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EchoImpl extends OperationImpl implements Echo {
+public class TIntegerImpl extends ValuesImpl implements TInteger {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EchoImpl() {
+	protected TIntegerImpl() {
 		super();
 	}
 
@@ -42,7 +41,7 @@ public class EchoImpl extends OperationImpl implements Echo {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RobotPackage.Literals.ECHO;
+		return RobotPackage.Literals.TINTEGER;
 	}
 
 	/**
@@ -50,8 +49,8 @@ public class EchoImpl extends OperationImpl implements Echo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getParam() {
-		return (String)eGet(RobotPackage.Literals.ECHO__PARAM, true);
+	public Integer getValue() {
+		return (Integer)eGet(RobotPackage.Literals.TINTEGER__VALUE, true);
 	}
 
 	/**
@@ -59,8 +58,8 @@ public class EchoImpl extends OperationImpl implements Echo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParam(String newParam) {
-		eSet(RobotPackage.Literals.ECHO__PARAM, newParam);
+	public void setValue(Integer newValue) {
+		eSet(RobotPackage.Literals.TINTEGER__VALUE, newValue);
 	}
 
-} //EchoImpl
+} //TIntegerImpl

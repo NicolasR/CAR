@@ -23,17 +23,17 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import robot.Echo;
 import robot.RobotPackage;
+import robot.TString;
 
 /**
- * This is the item provider adapter for a {@link robot.Echo} object.
+ * This is the item provider adapter for a {@link robot.TString} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EchoItemProvider
-	extends OperationItemProvider
+public class TStringItemProvider
+	extends ValuesItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -46,7 +46,7 @@ public class EchoItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EchoItemProvider(AdapterFactory adapterFactory) {
+	public TStringItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,25 +61,25 @@ public class EchoItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addParamPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Param feature.
+	 * This adds a property descriptor for the Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addParamPropertyDescriptor(Object object) {
+	protected void addValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Echo_param_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Echo_param_feature", "_UI_Echo_type"),
-				 RobotPackage.Literals.ECHO__PARAM,
+				 getString("_UI_TString_Value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TString_Value_feature", "_UI_TString_type"),
+				 RobotPackage.Literals.TSTRING__VALUE,
 				 true,
 				 false,
 				 false,
@@ -89,14 +89,14 @@ public class EchoItemProvider
 	}
 
 	/**
-	 * This returns Echo.gif.
+	 * This returns TString.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Echo"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TString"));
 	}
 
 	/**
@@ -107,10 +107,10 @@ public class EchoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Echo)object).getParam();
+		String label = ((TString)object).getValue();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Echo_type") :
-			getString("_UI_Echo_type") + " " + label;
+			getString("_UI_TString_type") :
+			getString("_UI_TString_type") + " " + label;
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class EchoItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Echo.class)) {
-			case RobotPackage.ECHO__PARAM:
+		switch (notification.getFeatureID(TString.class)) {
+			case RobotPackage.TSTRING__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

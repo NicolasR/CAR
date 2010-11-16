@@ -642,15 +642,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEcho_EReference0() {
-		return (EReference)echoEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVar() {
 		return varEClass;
 	}
@@ -796,7 +787,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 
 		echoEClass = createEClass(ECHO);
 		createEAttribute(echoEClass, ECHO__PARAM);
-		createEReference(echoEClass, ECHO__EREFERENCE0);
 
 		varEClass = createEClass(VAR);
 		createEReference(varEClass, VAR__VALUE);
@@ -916,7 +906,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 
 		initEClass(echoEClass, Echo.class, "Echo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEcho_Param(), ecorePackage.getEString(), "param", null, 0, 1, Echo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEcho_EReference0(), this.getOperation(), null, "EReference0", null, 0, 1, Echo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(varEClass, Var.class, "Var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVar_Value(), this.getValues(), null, "Value", null, 1, 1, Var.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

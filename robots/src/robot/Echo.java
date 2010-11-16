@@ -16,7 +16,6 @@ package robot;
  * The following features are supported:
  * <ul>
  *   <li>{@link robot.Echo#getParam <em>Param</em>}</li>
- *   <li>{@link robot.Echo#getEReference0 <em>EReference0</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,31 +49,5 @@ public interface Echo extends Operation {
 	 * @generated
 	 */
 	void setParam(String value);
-
-	/**
-	 * Returns the value of the '<em><b>EReference0</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>EReference0</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>EReference0</em>' reference.
-	 * @see #setEReference0(Operation)
-	 * @see robot.RobotPackage#getEcho_EReference0()
-	 * @model
-	 * @generated
-	 */
-	Operation getEReference0();
-
-	/**
-	 * Sets the value of the '{@link robot.Echo#getEReference0 <em>EReference0</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>EReference0</em>' reference.
-	 * @see #getEReference0()
-	 * @generated
-	 */
-	void setEReference0(Operation value);
 
 } // Echo

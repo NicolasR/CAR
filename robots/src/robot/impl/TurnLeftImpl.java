@@ -48,11 +48,12 @@ public class TurnLeftImpl extends MovementImpl implements TurnLeft {
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
 		float time = this.getDuration();
+		returnvalue += indent+"robot.turnLeft();";
 		if (time > 0)
 		{
-			returnvalue = indent+"sleep("+time+");\n";
+			returnvalue += "\n" + indent+"sleep("+time+");\n";
+			returnvalue += indent+"robot.wheels.speed = 0;\n";
 		}
-		returnvalue += indent+"robot.turnLeft();";
 		return returnvalue;
 	}
 } //TurnLeftImpl
