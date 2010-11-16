@@ -30,8 +30,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="At" lowerBound="1" eType="#//Operation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Onleave" lowerBound="1"
-        eType="#//Operation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Onleave" eType="#//Operation"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Condition" lowerBound="1"
         eType="#//Condition" containment="true"/>
   </eClassifiers>
@@ -81,11 +81,19 @@
     <eLiterals name="distanceFRF" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Var" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Value" lowerBound="1" eType="#//Values"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Values">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Condition" lowerBound="1"
+        eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Consequence" lowerBound="1"
+        eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclareVar" eSuperTypes="#//Var"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AffectVar" eSuperTypes="#//Var"/>
 </ecore:EPackage>

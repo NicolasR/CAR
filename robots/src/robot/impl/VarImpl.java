@@ -19,8 +19,8 @@ import robot.Var;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link robot.impl.VarImpl#getValue <em>Value</em>}</li>
  *   <li>{@link robot.impl.VarImpl#getName <em>Name</em>}</li>
+ *   <li>{@link robot.impl.VarImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *

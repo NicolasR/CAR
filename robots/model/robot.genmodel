@@ -44,6 +44,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Event/At"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Event/Onleave"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Event/Condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Event/whenever"/>
     </genClasses>
     <genClasses ecoreClass="robot.ecore#//Condition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Condition/AND"/>
@@ -73,14 +74,19 @@
     <genClasses ecoreClass="robot.ecore#//Different"/>
     <genClasses ecoreClass="robot.ecore#//Echo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Echo/param"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot.ecore#//Echo/EReference0"/>
     </genClasses>
     <genClasses ecoreClass="robot.ecore#//Var">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Var/Value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Var/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Var/Value"/>
     </genClasses>
     <genClasses ecoreClass="robot.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Variable/Name"/>
     </genClasses>
+    <genClasses ecoreClass="robot.ecore#//While">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot.ecore#//While/Condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot.ecore#//While/Consequence"/>
+    </genClasses>
+    <genClasses ecoreClass="robot.ecore#//DeclareVar"/>
+    <genClasses ecoreClass="robot.ecore#//AffectVar"/>
   </genPackages>
 </genmodel:GenModel>

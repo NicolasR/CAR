@@ -9,7 +9,6 @@ package robot.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import robot.Echo;
-import robot.Operation;
 import robot.RobotPackage;
 
 /**

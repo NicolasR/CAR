@@ -240,6 +240,29 @@ public class RobotSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case RobotPackage.WHILE: {
+				While while_ = (While)theEObject;
+				T result = caseWhile(while_);
+				if (result == null) result = caseOperation(while_);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RobotPackage.DECLARE_VAR: {
+				DeclareVar declareVar = (DeclareVar)theEObject;
+				T result = caseDeclareVar(declareVar);
+				if (result == null) result = caseVar(declareVar);
+				if (result == null) result = caseOperation(declareVar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RobotPackage.AFFECT_VAR: {
+				AffectVar affectVar = (AffectVar)theEObject;
+				T result = caseAffectVar(affectVar);
+				if (result == null) result = caseVar(affectVar);
+				if (result == null) result = caseOperation(affectVar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -571,6 +594,51 @@ public class RobotSwitch<T> {
 	 * @generated
 	 */
 	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>While</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>While</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWhile(While object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Declare Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Declare Var</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeclareVar(DeclareVar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Affect Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Affect Var</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAffectVar(AffectVar object) {
 		return null;
 	}
 

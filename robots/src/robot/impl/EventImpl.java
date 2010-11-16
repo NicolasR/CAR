@@ -23,6 +23,7 @@ import robot.RobotPackage;
  *   <li>{@link robot.impl.EventImpl#getAt <em>At</em>}</li>
  *   <li>{@link robot.impl.EventImpl#getOnleave <em>Onleave</em>}</li>
  *   <li>{@link robot.impl.EventImpl#getCondition <em>Condition</em>}</li>
+ *   <li>{@link robot.impl.EventImpl#getWhenever <em>Whenever</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,8 +102,26 @@ public class EventImpl extends OperationImpl implements Event {
 	public void setCondition(Condition newCondition) {
 		eSet(RobotPackage.Literals.EVENT__CONDITION, newCondition);
 	}
-	
-	 /**
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operation getWhenever() {
+		return (Operation)eGet(RobotPackage.Literals.EVENT__WHENEVER, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWhenever(Operation newWhenever) {
+		eSet(RobotPackage.Literals.EVENT__WHENEVER, newWhenever);
+	}
+
+	/**
 	* <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
 	* @generated NOT

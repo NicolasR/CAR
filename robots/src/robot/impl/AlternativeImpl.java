@@ -101,7 +101,7 @@ public class AlternativeImpl extends OperationImpl implements Alternative {
 	public void setCondition(Condition newCondition) {
 		eSet(RobotPackage.Literals.ALTERNATIVE__CONDITION, newCondition);
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

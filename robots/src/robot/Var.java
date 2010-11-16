@@ -15,8 +15,8 @@ package robot;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link robot.Var#getValue <em>Value</em>}</li>
  *   <li>{@link robot.Var#getName <em>Name</em>}</li>
+ *   <li>{@link robot.Var#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *

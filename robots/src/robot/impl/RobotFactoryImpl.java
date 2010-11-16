@@ -83,6 +83,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 			case RobotPackage.ECHO: return (EObject)createEcho();
 			case RobotPackage.VAR: return (EObject)createVar();
 			case RobotPackage.VARIABLE: return (EObject)createVariable();
+			case RobotPackage.WHILE: return (EObject)createWhile();
+			case RobotPackage.DECLARE_VAR: return (EObject)createDeclareVar();
+			case RobotPackage.AFFECT_VAR: return (EObject)createAffectVar();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -340,6 +343,36 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	public Variable createVariable() {
 		VariableImpl variable = new VariableImpl();
 		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public While createWhile() {
+		WhileImpl while_ = new WhileImpl();
+		return while_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeclareVar createDeclareVar() {
+		DeclareVarImpl declareVar = new DeclareVarImpl();
+		return declareVar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AffectVar createAffectVar() {
+		AffectVarImpl affectVar = new AffectVarImpl();
+		return affectVar;
 	}
 
 	/**

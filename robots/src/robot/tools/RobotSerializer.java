@@ -5,8 +5,11 @@ import generator.website.SimpleToURBI;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Map;
+
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -19,20 +22,49 @@ import robot.RobotPackage;
 
 public class RobotSerializer {
 
+	class OnlyExt implements FilenameFilter {
+		  String ext;
+
+		  public OnlyExt(String ext) {
+		    this.ext = "." + ext;
+		  }
+
+		  public boolean accept(File dir, String name) {
+		    return name.endsWith(ext);
+		  }
+		}
+	
 	public void generateUrbi(Mission mission){
 		//SimpleToHTML est le nom de la classe générée par JET à partir du template
 		SimpleToURBI urbicode = new SimpleToURBI();
+		String destdir = "generated";
 		FileWriter output;
 		BufferedWriter writer;
-		System.out.println("Creating Mission URBI Code");
+		System.out.println("Creating URBI Code");
 		
 		try {
-			output = new FileWriter("mission.u");
-			writer = new BufferedWriter(output);
+			String[] fileList;
+			File directory = new File("model" );
+			FilenameFilter filter = new FilenameFilter(){
+					public boolean accept(File dir, String name) {
+						return name.endsWith(".xmi");
+					}
+			};
+
+			fileList = directory.list(filter);
+			for (String string : fileList) {
+				String newname = string.replace(".xmi", ".u");
+				output = new FileWriter(destdir+"/"+newname);
+				writer = new BufferedWriter(output);
+				System.out.println("Generate Urbi for "+string);
+				
+				//Appel de la méthode generate de la classe générée par JET
+				writer.write(urbicode.generate(mission));
+				writer.close();
+			}
+			System.out.println(fileList.length+" file(s) generated");
 			
-			//Appel de la méthode generate de la classe générée par JET
-			writer.write(urbicode.generate(mission));
-			writer.close();
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

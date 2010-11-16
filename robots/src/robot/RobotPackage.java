@@ -359,13 +359,22 @@ public interface RobotPackage extends EPackage {
 	int EVENT__CONDITION = OPERATION_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Whenever</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__WHENEVER = OPERATION_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 3;
+	int EVENT_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link robot.impl.ConditionImpl <em>Condition</em>}' class.
@@ -676,22 +685,22 @@ public interface RobotPackage extends EPackage {
 	int VAR = 20;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VAR__VALUE = OPERATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VAR__NAME = OPERATION_FEATURE_COUNT + 1;
+	int VAR__NAME = OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAR__VALUE = OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Var</em>' class.
@@ -731,6 +740,117 @@ public interface RobotPackage extends EPackage {
 	int VARIABLE_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link robot.impl.WhileImpl <em>While</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see robot.impl.WhileImpl
+	 * @see robot.impl.RobotPackageImpl#getWhile()
+	 * @generated
+	 */
+	int WHILE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__CONDITION = OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Consequence</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE__CONSEQUENCE = OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>While</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WHILE_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link robot.impl.DeclareVarImpl <em>Declare Var</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see robot.impl.DeclareVarImpl
+	 * @see robot.impl.RobotPackageImpl#getDeclareVar()
+	 * @generated
+	 */
+	int DECLARE_VAR = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARE_VAR__NAME = VAR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARE_VAR__VALUE = VAR__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Declare Var</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECLARE_VAR_FEATURE_COUNT = VAR_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link robot.impl.AffectVarImpl <em>Affect Var</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see robot.impl.AffectVarImpl
+	 * @see robot.impl.RobotPackageImpl#getAffectVar()
+	 * @generated
+	 */
+	int AFFECT_VAR = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AFFECT_VAR__NAME = VAR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AFFECT_VAR__VALUE = VAR__VALUE;
+
+	/**
+	 * The number of structural features of the '<em>Affect Var</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AFFECT_VAR_FEATURE_COUNT = VAR_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link robot.EOperator <em>EOperator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -738,7 +858,7 @@ public interface RobotPackage extends EPackage {
 	 * @see robot.impl.RobotPackageImpl#getEOperator()
 	 * @generated
 	 */
-	int EOPERATOR = 22;
+	int EOPERATOR = 25;
 
 	/**
 	 * The meta object id for the '{@link robot.ESensor <em>ESensor</em>}' enum.
@@ -748,7 +868,7 @@ public interface RobotPackage extends EPackage {
 	 * @see robot.impl.RobotPackageImpl#getESensor()
 	 * @generated
 	 */
-	int ESENSOR = 23;
+	int ESENSOR = 26;
 
 
 	/**
@@ -949,6 +1069,17 @@ public interface RobotPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEvent_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link robot.Event#getWhenever <em>Whenever</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Whenever</em>'.
+	 * @see robot.Event#getWhenever()
+	 * @see #getEvent()
+	 * @generated
+	 */
+	EReference getEvent_Whenever();
 
 	/**
 	 * Returns the meta object for class '{@link robot.Condition <em>Condition</em>}'.
@@ -1225,6 +1356,58 @@ public interface RobotPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
+	 * Returns the meta object for class '{@link robot.While <em>While</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>While</em>'.
+	 * @see robot.While
+	 * @generated
+	 */
+	EClass getWhile();
+
+	/**
+	 * Returns the meta object for the reference '{@link robot.While#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Condition</em>'.
+	 * @see robot.While#getCondition()
+	 * @see #getWhile()
+	 * @generated
+	 */
+	EReference getWhile_Condition();
+
+	/**
+	 * Returns the meta object for the reference '{@link robot.While#getConsequence <em>Consequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Consequence</em>'.
+	 * @see robot.While#getConsequence()
+	 * @see #getWhile()
+	 * @generated
+	 */
+	EReference getWhile_Consequence();
+
+	/**
+	 * Returns the meta object for class '{@link robot.DeclareVar <em>Declare Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Declare Var</em>'.
+	 * @see robot.DeclareVar
+	 * @generated
+	 */
+	EClass getDeclareVar();
+
+	/**
+	 * Returns the meta object for class '{@link robot.AffectVar <em>Affect Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Affect Var</em>'.
+	 * @see robot.AffectVar
+	 * @generated
+	 */
+	EClass getAffectVar();
+
+	/**
 	 * Returns the meta object for enum '{@link robot.EOperator <em>EOperator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1437,6 +1620,14 @@ public interface RobotPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVENT__CONDITION = eINSTANCE.getEvent_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Whenever</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVENT__WHENEVER = eINSTANCE.getEvent_Whenever();
 
 		/**
 		 * The meta object literal for the '{@link robot.impl.ConditionImpl <em>Condition</em>}' class.
@@ -1669,6 +1860,52 @@ public interface RobotPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.WhileImpl <em>While</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.WhileImpl
+		 * @see robot.impl.RobotPackageImpl#getWhile()
+		 * @generated
+		 */
+		EClass WHILE = eINSTANCE.getWhile();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WHILE__CONDITION = eINSTANCE.getWhile_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Consequence</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WHILE__CONSEQUENCE = eINSTANCE.getWhile_Consequence();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.DeclareVarImpl <em>Declare Var</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.DeclareVarImpl
+		 * @see robot.impl.RobotPackageImpl#getDeclareVar()
+		 * @generated
+		 */
+		EClass DECLARE_VAR = eINSTANCE.getDeclareVar();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.AffectVarImpl <em>Affect Var</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.AffectVarImpl
+		 * @see robot.impl.RobotPackageImpl#getAffectVar()
+		 * @generated
+		 */
+		EClass AFFECT_VAR = eINSTANCE.getAffectVar();
 
 		/**
 		 * The meta object literal for the '{@link robot.EOperator <em>EOperator</em>}' enum.

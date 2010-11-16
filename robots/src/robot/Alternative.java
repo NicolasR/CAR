@@ -6,6 +6,8 @@
  */
 package robot;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->

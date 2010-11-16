@@ -224,6 +224,33 @@ public interface RobotFactory extends EFactory {
 	Variable createVariable();
 
 	/**
+	 * Returns a new object of class '<em>While</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>While</em>'.
+	 * @generated
+	 */
+	While createWhile();
+
+	/**
+	 * Returns a new object of class '<em>Declare Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Declare Var</em>'.
+	 * @generated
+	 */
+	DeclareVar createDeclareVar();
+
+	/**
+	 * Returns a new object of class '<em>Affect Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Affect Var</em>'.
+	 * @generated
+	 */
+	AffectVar createAffectVar();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

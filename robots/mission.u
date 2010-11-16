@@ -14,16 +14,44 @@ at(distanceFLF.val > threshold || distanceFRF.val > threshold)
 {
 	if(distanceFLF.val > distanceFRF.val)
 	{
-		robot.turnRight();
+		{
+			echo("DROITE!!!");
+			robot.backward();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.turnRight();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.forward();
+		}
 	}
 	else
-		robot.turnLeft();
+		{
+			robot.backward();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			echo("GAUCHE!!!");
+			robot.turnLeft();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.forward();
+		}
 
 }
 onleave
 {
-	sleep(0.0020);
 	robot.forward();
+	sleep(0.0020);
+	robot.wheels.speed = 0;
+
 };
+robot.forward();
+sleep(1.0);
+robot.wheels.speed = 0;
+
+robot.backward();
+sleep(1.0);
+robot.wheels.speed = 0;
+
 robot.forward();
 }
