@@ -240,18 +240,26 @@ public class RobotSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RobotPackage.WHILE: {
-				While while_ = (While)theEObject;
-				T result = caseWhile(while_);
-				if (result == null) result = caseOperation(while_);
+			case RobotPackage.STOP: {
+				Stop stop = (Stop)theEObject;
+				T result = caseStop(stop);
+				if (result == null) result = caseMovement(stop);
+				if (result == null) result = caseOperation(stop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RobotPackage.DECLARE_VAR: {
-				DeclareVar declareVar = (DeclareVar)theEObject;
-				T result = caseDeclareVar(declareVar);
-				if (result == null) result = caseVar(declareVar);
-				if (result == null) result = caseOperation(declareVar);
+			case RobotPackage.SLEEP: {
+				Sleep sleep = (Sleep)theEObject;
+				T result = caseSleep(sleep);
+				if (result == null) result = caseMovement(sleep);
+				if (result == null) result = caseOperation(sleep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RobotPackage.WHENEVER: {
+				Whenever whenever = (Whenever)theEObject;
+				T result = caseWhenever(whenever);
+				if (result == null) result = caseOperation(whenever);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -260,6 +268,14 @@ public class RobotSwitch<T> {
 				T result = caseAffectVar(affectVar);
 				if (result == null) result = caseVar(affectVar);
 				if (result == null) result = caseOperation(affectVar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RobotPackage.DECLARE_VAR: {
+				DeclareVar declareVar = (DeclareVar)theEObject;
+				T result = caseDeclareVar(declareVar);
+				if (result == null) result = caseVar(declareVar);
+				if (result == null) result = caseOperation(declareVar);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -598,32 +614,47 @@ public class RobotSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>While</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Stop</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>While</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Stop</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWhile(While object) {
+	public T caseStop(Stop object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Declare Var</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Sleep</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Declare Var</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Sleep</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDeclareVar(DeclareVar object) {
+	public T caseSleep(Sleep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Whenever</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Whenever</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWhenever(Whenever object) {
 		return null;
 	}
 
@@ -639,6 +670,21 @@ public class RobotSwitch<T> {
 	 * @generated
 	 */
 	public T caseAffectVar(AffectVar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Declare Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Declare Var</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeclareVar(DeclareVar object) {
 		return null;
 	}
 

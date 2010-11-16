@@ -34,9 +34,10 @@ public class RobotSerializer {
 		  }
 		}
 	
-	public void generateUrbi(Mission mission){
+	public void generateUrbi(){
 		//SimpleToHTML est le nom de la classe générée par JET à partir du template
 		SimpleToURBI urbicode = new SimpleToURBI();
+		String srcdir = "model";
 		String destdir = "generated";
 		FileWriter output;
 		BufferedWriter writer;
@@ -44,7 +45,7 @@ public class RobotSerializer {
 		
 		try {
 			String[] fileList;
-			File directory = new File("model" );
+			File directory = new File(srcdir);
 			FilenameFilter filter = new FilenameFilter(){
 					public boolean accept(File dir, String name) {
 						return name.endsWith(".xmi");
@@ -59,7 +60,8 @@ public class RobotSerializer {
 				System.out.println("Generate Urbi for "+string);
 				
 				//Appel de la méthode generate de la classe générée par JET
-				writer.write(urbicode.generate(mission));
+				File mission = new File(srcdir+"/"+string);
+				writer.write(urbicode.generate(load(mission)));
 				writer.close();
 			}
 			System.out.println(fileList.length+" file(s) generated");
@@ -92,8 +94,8 @@ public class RobotSerializer {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RobotSerializer robotSerializer = new RobotSerializer();
-		Mission mission = robotSerializer.load(new File("model/Mission1.xmi"));
-		robotSerializer.generateUrbi(mission);
+		//Mission mission = robotSerializer.load(new File("model/Mission2.xmi"));
+		robotSerializer.generateUrbi();
 	}
 
 }

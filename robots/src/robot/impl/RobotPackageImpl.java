@@ -14,10 +14,12 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import robot.Affectation;
 import robot.AffectVar;
 import robot.Alternative;
 import robot.Backward;
 import robot.Condition;
+import robot.Declaration;
 import robot.DeclareVar;
 import robot.Different;
 import robot.EOperator;
@@ -33,6 +35,8 @@ import robot.RobotFactory;
 import robot.RobotPackage;
 import robot.Sensor;
 import robot.Sequence;
+import robot.Sleep;
+import robot.Stop;
 import robot.TBoolean;
 import robot.TFloat;
 import robot.TInteger;
@@ -42,6 +46,7 @@ import robot.TurnRight;
 import robot.Values;
 import robot.Var;
 import robot.Variable;
+import robot.Whenever;
 import robot.While;
 
 /**
@@ -210,14 +215,21 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass whileEClass = null;
+	private EClass stopEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass declareVarEClass = null;
+	private EClass sleepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wheneverEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,6 +237,13 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * @generated
 	 */
 	private EClass affectVarEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass declareVarEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -477,15 +496,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEvent_Whenever() {
-		return (EReference)eventEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCondition() {
 		return conditionEClass;
 	}
@@ -685,7 +695,7 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * @generated
 	 */
 	public EReference getVar_Value() {
-		return (EReference)varEClass.getEStructuralFeatures().get(1);
+		return (EReference)varEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -694,7 +704,7 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * @generated
 	 */
 	public EAttribute getVar_Name() {
-		return (EAttribute)varEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)varEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -720,8 +730,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWhile() {
-		return whileEClass;
+	public EClass getStop() {
+		return stopEClass;
 	}
 
 	/**
@@ -729,8 +739,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWhile_Condition() {
-		return (EReference)whileEClass.getEStructuralFeatures().get(0);
+	public EClass getSleep() {
+		return sleepEClass;
 	}
 
 	/**
@@ -738,8 +748,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWhile_Consequence() {
-		return (EReference)whileEClass.getEStructuralFeatures().get(1);
+	public EClass getWhenever() {
+		return wheneverEClass;
 	}
 
 	/**
@@ -747,8 +757,26 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDeclareVar() {
-		return declareVarEClass;
+	public EReference getWhenever_Condition() {
+		return (EReference)wheneverEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWhenever_Whenever() {
+		return (EReference)wheneverEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWhenever_Else() {
+		return (EReference)wheneverEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -758,6 +786,15 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 */
 	public EClass getAffectVar() {
 		return affectVarEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeclareVar() {
+		return declareVarEClass;
 	}
 
 	/**
@@ -834,7 +871,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		createEReference(eventEClass, EVENT__AT);
 		createEReference(eventEClass, EVENT__ONLEAVE);
 		createEReference(eventEClass, EVENT__CONDITION);
-		createEReference(eventEClass, EVENT__WHENEVER);
 
 		conditionEClass = createEClass(CONDITION);
 		createEReference(conditionEClass, CONDITION__AND);
@@ -868,19 +904,24 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		createEAttribute(echoEClass, ECHO__PARAM);
 
 		varEClass = createEClass(VAR);
-		createEAttribute(varEClass, VAR__NAME);
 		createEReference(varEClass, VAR__VALUE);
+		createEAttribute(varEClass, VAR__NAME);
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 
-		whileEClass = createEClass(WHILE);
-		createEReference(whileEClass, WHILE__CONDITION);
-		createEReference(whileEClass, WHILE__CONSEQUENCE);
+		stopEClass = createEClass(STOP);
 
-		declareVarEClass = createEClass(DECLARE_VAR);
+		sleepEClass = createEClass(SLEEP);
+
+		wheneverEClass = createEClass(WHENEVER);
+		createEReference(wheneverEClass, WHENEVER__CONDITION);
+		createEReference(wheneverEClass, WHENEVER__WHENEVER);
+		createEReference(wheneverEClass, WHENEVER__ELSE);
 
 		affectVarEClass = createEClass(AFFECT_VAR);
+
+		declareVarEClass = createEClass(DECLARE_VAR);
 
 		// Create enums
 		eOperatorEEnum = createEEnum(EOPERATOR);
@@ -932,9 +973,11 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		echoEClass.getESuperTypes().add(this.getOperation());
 		varEClass.getESuperTypes().add(this.getOperation());
 		variableEClass.getESuperTypes().add(this.getValues());
-		whileEClass.getESuperTypes().add(this.getOperation());
-		declareVarEClass.getESuperTypes().add(this.getVar());
+		stopEClass.getESuperTypes().add(this.getMovement());
+		sleepEClass.getESuperTypes().add(this.getMovement());
+		wheneverEClass.getESuperTypes().add(this.getOperation());
 		affectVarEClass.getESuperTypes().add(this.getVar());
+		declareVarEClass.getESuperTypes().add(this.getVar());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(missionEClass, Mission.class, "Mission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -965,7 +1008,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEReference(getEvent_At(), this.getOperation(), null, "At", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvent_Onleave(), this.getOperation(), null, "Onleave", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvent_Condition(), this.getCondition(), null, "Condition", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEvent_Whenever(), this.getOperation(), null, "whenever", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCondition_AND(), this.getCondition(), null, "AND", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -999,19 +1041,24 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEAttribute(getEcho_Param(), ecorePackage.getEString(), "param", null, 0, 1, Echo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(varEClass, Var.class, "Var", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVar_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Var.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVar_Value(), this.getValues(), null, "Value", null, 1, 1, Var.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVar_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Var.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(whileEClass, While.class, "While", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWhile_Condition(), this.getCondition(), null, "Condition", null, 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWhile_Consequence(), this.getOperation(), null, "Consequence", null, 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(stopEClass, Stop.class, "Stop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(declareVarEClass, DeclareVar.class, "DeclareVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(sleepEClass, Sleep.class, "Sleep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(wheneverEClass, Whenever.class, "Whenever", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWhenever_Condition(), this.getCondition(), null, "Condition", null, 1, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWhenever_Whenever(), this.getOperation(), null, "Whenever", null, 1, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWhenever_Else(), this.getOperation(), null, "Else", null, 0, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(affectVarEClass, AffectVar.class, "AffectVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(declareVarEClass, DeclareVar.class, "DeclareVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(eOperatorEEnum, EOperator.class, "EOperator");
@@ -1023,8 +1070,22 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		addEEnumLiteral(eOperatorEEnum, EOperator.LTE);
 
 		initEEnum(eSensorEEnum, ESensor.class, "ESensor");
-		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FLF);
 		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FRF);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FRB);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_R);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_BR);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_BL);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_L);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FLB);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FLF);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FRF);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FRB);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_R);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_BR);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_BL);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_L);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FLB);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FLF);
 
 		// Create resource
 		createResource(eNS_URI);

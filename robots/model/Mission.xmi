@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
 <robot:Mission xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:robot="http://robot/1.0" xsi:schemaLocation="http://robot/1.0 robot.ecore"/>
+    xmlns:emof="http://schema.omg.org/spec/MOF/2.0/emof.xml" xmlns:robot="http://robot/1.0"
+    xsi:schemaLocation="http://schema.omg.org/spec/MOF/2.0/emof.xml http://www.eclipse.org/emf/2002/Ecore http://robot/1.0 robot.ecore" xmi:id="_0">
+  <Sequence xmi:id="_0.@Sequence">
+    <Operations xmi:type="robot:DeclareVar" xmi:id="_0.@Sequence.@Operations.0" Name="test">
+      <Value xmi:type="robot:TBoolean" xmi:id="_0.@Sequence.@Operations.0.@Value"/>
+    </Operations>
+  </Sequence>
+</robot:Mission>

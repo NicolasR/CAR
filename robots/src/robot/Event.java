@@ -6,7 +6,6 @@
  */
 package robot;
 
-import org.eclipse.emf.common.util.EList;
 
 
 /**
@@ -20,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link robot.Event#getAt <em>At</em>}</li>
  *   <li>{@link robot.Event#getOnleave <em>Onleave</em>}</li>
  *   <li>{@link robot.Event#getCondition <em>Condition</em>}</li>
- *   <li>{@link robot.Event#getWhenever <em>Whenever</em>}</li>
  * </ul>
  * </p>
  *
@@ -106,31 +104,5 @@ public interface Event extends Operation {
 	 * @generated
 	 */
 	void setCondition(Condition value);
-
-	/**
-	 * Returns the value of the '<em><b>Whenever</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Whenever</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Whenever</em>' containment reference.
-	 * @see #setWhenever(Operation)
-	 * @see robot.RobotPackage#getEvent_Whenever()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Operation getWhenever();
-
-	/**
-	 * Sets the value of the '{@link robot.Event#getWhenever <em>Whenever</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Whenever</em>' containment reference.
-	 * @see #getWhenever()
-	 * @generated
-	 */
-	void setWhenever(Operation value);
 
 } // Event

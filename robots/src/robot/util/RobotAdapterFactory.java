@@ -160,16 +160,24 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 				return createVariableAdapter();
 			}
 			@Override
-			public Adapter caseWhile(While object) {
-				return createWhileAdapter();
+			public Adapter caseStop(Stop object) {
+				return createStopAdapter();
 			}
 			@Override
-			public Adapter caseDeclareVar(DeclareVar object) {
-				return createDeclareVarAdapter();
+			public Adapter caseSleep(Sleep object) {
+				return createSleepAdapter();
+			}
+			@Override
+			public Adapter caseWhenever(Whenever object) {
+				return createWheneverAdapter();
 			}
 			@Override
 			public Adapter caseAffectVar(AffectVar object) {
 				return createAffectVarAdapter();
+			}
+			@Override
+			public Adapter caseDeclareVar(DeclareVar object) {
+				return createDeclareVarAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -500,30 +508,44 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.While <em>While</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.Stop <em>Stop</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.While
+	 * @see robot.Stop
 	 * @generated
 	 */
-	public Adapter createWhileAdapter() {
+	public Adapter createStopAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.DeclareVar <em>Declare Var</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.Sleep <em>Sleep</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.DeclareVar
+	 * @see robot.Sleep
 	 * @generated
 	 */
-	public Adapter createDeclareVarAdapter() {
+	public Adapter createSleepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link robot.Whenever <em>Whenever</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see robot.Whenever
+	 * @generated
+	 */
+	public Adapter createWheneverAdapter() {
 		return null;
 	}
 
@@ -538,6 +560,20 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAffectVarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link robot.DeclareVar <em>Declare Var</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see robot.DeclareVar
+	 * @generated
+	 */
+	public Adapter createDeclareVarAdapter() {
 		return null;
 	}
 

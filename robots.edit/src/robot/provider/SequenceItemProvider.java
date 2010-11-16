@@ -202,6 +202,11 @@ public class SequenceItemProvider
 			(createChildParameter
 				(RobotPackage.Literals.SEQUENCE__OPERATIONS,
 				 RobotFactory.eINSTANCE.createVar()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RobotPackage.Literals.SEQUENCE__OPERATIONS,
+				 RobotFactory.eINSTANCE.createStop()));
 	}
 
 }

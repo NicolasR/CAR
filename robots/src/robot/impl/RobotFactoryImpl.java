@@ -83,9 +83,11 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 			case RobotPackage.ECHO: return (EObject)createEcho();
 			case RobotPackage.VAR: return (EObject)createVar();
 			case RobotPackage.VARIABLE: return (EObject)createVariable();
-			case RobotPackage.WHILE: return (EObject)createWhile();
-			case RobotPackage.DECLARE_VAR: return (EObject)createDeclareVar();
+			case RobotPackage.STOP: return (EObject)createStop();
+			case RobotPackage.SLEEP: return (EObject)createSleep();
+			case RobotPackage.WHENEVER: return (EObject)createWhenever();
 			case RobotPackage.AFFECT_VAR: return (EObject)createAffectVar();
+			case RobotPackage.DECLARE_VAR: return (EObject)createDeclareVar();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -350,9 +352,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public While createWhile() {
-		WhileImpl while_ = new WhileImpl();
-		return while_;
+	public Stop createStop() {
+		StopImpl stop = new StopImpl();
+		return stop;
 	}
 
 	/**
@@ -360,9 +362,19 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DeclareVar createDeclareVar() {
-		DeclareVarImpl declareVar = new DeclareVarImpl();
-		return declareVar;
+	public Sleep createSleep() {
+		SleepImpl sleep = new SleepImpl();
+		return sleep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Whenever createWhenever() {
+		WheneverImpl whenever = new WheneverImpl();
+		return whenever;
 	}
 
 	/**
@@ -373,6 +385,16 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	public AffectVar createAffectVar() {
 		AffectVarImpl affectVar = new AffectVarImpl();
 		return affectVar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeclareVar createDeclareVar() {
+		DeclareVarImpl declareVar = new DeclareVarImpl();
+		return declareVar;
 	}
 
 	/**

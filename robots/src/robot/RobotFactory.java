@@ -224,22 +224,31 @@ public interface RobotFactory extends EFactory {
 	Variable createVariable();
 
 	/**
-	 * Returns a new object of class '<em>While</em>'.
+	 * Returns a new object of class '<em>Stop</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>While</em>'.
+	 * @return a new object of class '<em>Stop</em>'.
 	 * @generated
 	 */
-	While createWhile();
+	Stop createStop();
 
 	/**
-	 * Returns a new object of class '<em>Declare Var</em>'.
+	 * Returns a new object of class '<em>Sleep</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Declare Var</em>'.
+	 * @return a new object of class '<em>Sleep</em>'.
 	 * @generated
 	 */
-	DeclareVar createDeclareVar();
+	Sleep createSleep();
+
+	/**
+	 * Returns a new object of class '<em>Whenever</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Whenever</em>'.
+	 * @generated
+	 */
+	Whenever createWhenever();
 
 	/**
 	 * Returns a new object of class '<em>Affect Var</em>'.
@@ -249,6 +258,15 @@ public interface RobotFactory extends EFactory {
 	 * @generated
 	 */
 	AffectVar createAffectVar();
+
+	/**
+	 * Returns a new object of class '<em>Declare Var</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Declare Var</em>'.
+	 * @generated
+	 */
+	DeclareVar createDeclareVar();
 
 	/**
 	 * Returns the package supported by this factory.
