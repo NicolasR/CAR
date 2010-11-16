@@ -1,0 +1,5 @@
+#Tue Nov 16 11:55:44 CET 2010
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/robots/model/robot.genmodel
+gmf_dashboard/domainModel=platform\:/resource/robots/model/robot.ecore
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/robots/model/My.gmfgraph

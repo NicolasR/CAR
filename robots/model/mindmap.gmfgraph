@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="robot">
+  <figures name="Default">
+    <descriptors name="SequenceFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="SequenceFigure"/>
+    </descriptors>
+    <descriptors name="OperationFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="OperationFigure"/>
+    </descriptors>
+    <descriptors name="MovementFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="MovementFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="MovementDurationFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ForwardFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ForwardFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ForwardDurationFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="BackwardFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="BackwardFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="BackwardDurationFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TurnLeftFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TurnLeftFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TurnLeftDurationFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TurnRightFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TurnRightFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TurnRightDurationFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AlternativeFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AlternativeFigure"/>
+    </descriptors>
+    <descriptors name="EventFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EventFigure"/>
+    </descriptors>
+    <descriptors name="ConditionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ConditionFigure"/>
+    </descriptors>
+    <descriptors name="ValuesFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ValuesFigure"/>
+    </descriptors>
+    <descriptors name="SensorFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="SensorFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="SensorNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TIntegerFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TIntegerFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TIntegerValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TStringFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TStringFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TStringValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TFloatFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TFloatFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TFloatValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TBooleanFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TBooleanFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="TBooleanValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.15/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="OperatorFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="OperatorFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="OperatorTypeFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DifferentFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DifferentFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="DifferentTypeFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EchoFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EchoFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="EchoParamFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="VarFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="VarFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="VarNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.19/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="VariableFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="VariableFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="VariableNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.20/@actualFigure/@children.0"/>
+    </descriptors>
+  </figures>
+  <nodes name="Sequence" figure="SequenceFigure"/>
+  <nodes name="Operation" figure="OperationFigure"/>
+  <nodes name="Movement" figure="MovementFigure"/>
+  <nodes name="Forward" figure="ForwardFigure"/>
+  <nodes name="Backward" figure="BackwardFigure"/>
+  <nodes name="TurnLeft" figure="TurnLeftFigure"/>
+  <nodes name="TurnRight" figure="TurnRightFigure"/>
+  <nodes name="Alternative" figure="AlternativeFigure"/>
+  <nodes name="Event" figure="EventFigure"/>
+  <nodes name="Condition" figure="ConditionFigure"/>
+  <nodes name="Values" figure="ValuesFigure"/>
+  <nodes name="Sensor" figure="SensorFigure"/>
+  <nodes name="TInteger" figure="TIntegerFigure"/>
+  <nodes name="TString" figure="TStringFigure"/>
+  <nodes name="TFloat" figure="TFloatFigure"/>
+  <nodes name="TBoolean" figure="TBooleanFigure"/>
+  <nodes name="Operator" figure="OperatorFigure"/>
+  <nodes name="Different" figure="DifferentFigure"/>
+  <nodes name="Echo" figure="EchoFigure"/>
+  <nodes name="Var" figure="VarFigure"/>
+  <nodes name="Variable" figure="VariableFigure"/>
+  <labels name="MovementDuration" figure="MovementFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="ForwardDuration" figure="ForwardFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="BackwardDuration" figure="BackwardFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="TurnLeftDuration" figure="TurnLeftFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="TurnRightDuration" figure="TurnRightFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="SensorName" figure="SensorFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="TIntegerValue" figure="TIntegerFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="TStringValue" figure="TStringFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <labels name="TFloatValue" figure="TFloatFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="TBooleanValue" figure="TBooleanFigure" accessor="//@figures.0/@descriptors.15/@accessors.0"/>
+  <labels name="OperatorType" figure="OperatorFigure" accessor="//@figures.0/@descriptors.16/@accessors.0"/>
+  <labels name="DifferentType" figure="DifferentFigure" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
+  <labels name="EchoParam" figure="EchoFigure" accessor="//@figures.0/@descriptors.18/@accessors.0"/>
+  <labels name="VarName" figure="VarFigure" accessor="//@figures.0/@descriptors.19/@accessors.0"/>
+  <labels name="VariableName" figure="VariableFigure" accessor="//@figures.0/@descriptors.20/@accessors.0"/>
+</gmfgraph:Canvas>
