@@ -18,6 +18,7 @@ import robot.Forward;
 import robot.Operation;
 import robot.RobotPackage;
 import robot.Sequence;
+import robot.Stop;
 import robot.TurnLeft;
 import robot.TurnRight;
 import robot.Var;
@@ -105,6 +106,10 @@ public class OperationImpl extends CDOObjectImpl implements Operation {
 		else if (this instanceof Forward)
 		{
 		retour = ((Forward)this).toUrbiString(indent);
+		}
+		else if (this instanceof Stop)
+		{
+			retour = ((Stop)this).toUrbiString(indent);
 		}
 		else if (this instanceof Sequence)
 		{

@@ -209,6 +209,11 @@ public class AlternativeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(RobotPackage.Literals.ALTERNATIVE__CONSEQUENCE,
+				 RobotFactory.eINSTANCE.createStop()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(RobotPackage.Literals.ALTERNATIVE__ALTERNATIVE,
 				 RobotFactory.eINSTANCE.createOperation()));
 
@@ -261,6 +266,11 @@ public class AlternativeItemProvider
 			(createChildParameter
 				(RobotPackage.Literals.ALTERNATIVE__ALTERNATIVE,
 				 RobotFactory.eINSTANCE.createVar()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RobotPackage.Literals.ALTERNATIVE__ALTERNATIVE,
+				 RobotFactory.eINSTANCE.createStop()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -60,7 +60,7 @@ public class RobotSerializer {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RobotSerializer robotSerializer = new RobotSerializer();
-		Mission mission = robotSerializer.load(new File("model/Mission1.xmi"));
+		Mission mission = robotSerializer.load(new File("model/Mission2.xmi"));
 		robotSerializer.generateUrbi(mission);
 	}
 

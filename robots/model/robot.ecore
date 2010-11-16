@@ -77,8 +77,22 @@
     <eLiterals name="LTE" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ESensor">
-    <eLiterals name="distanceFLF"/>
-    <eLiterals name="distanceFRF" value="1"/>
+    <eLiterals name="distanceFRF" value="4"/>
+    <eLiterals name="distanceFRB" value="5"/>
+    <eLiterals name="distanceR" value="6"/>
+    <eLiterals name="distanceBR" value="7"/>
+    <eLiterals name="distanceBL" value="8"/>
+    <eLiterals name="distanceL" value="9"/>
+    <eLiterals name="distanceFLB" value="10"/>
+    <eLiterals name="distanceFLF" value="11"/>
+    <eLiterals name="lightFRF" value="16"/>
+    <eLiterals name="lightFRB" value="17"/>
+    <eLiterals name="lightR" value="18"/>
+    <eLiterals name="lightBR" value="19"/>
+    <eLiterals name="lightBL" value="20"/>
+    <eLiterals name="lightL" value="21"/>
+    <eLiterals name="lightFLB" value="22"/>
+    <eLiterals name="lightFLF" value="23"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Var" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Value" lowerBound="1" eType="#//Values"
@@ -88,4 +102,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Values">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stop" eSuperTypes="#//Movement"/>
 </ecore:EPackage>

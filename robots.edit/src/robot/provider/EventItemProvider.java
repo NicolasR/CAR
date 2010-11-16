@@ -209,6 +209,11 @@ public class EventItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(RobotPackage.Literals.EVENT__AT,
+				 RobotFactory.eINSTANCE.createStop()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(RobotPackage.Literals.EVENT__ONLEAVE,
 				 RobotFactory.eINSTANCE.createOperation()));
 
@@ -261,6 +266,11 @@ public class EventItemProvider
 			(createChildParameter
 				(RobotPackage.Literals.EVENT__ONLEAVE,
 				 RobotFactory.eINSTANCE.createVar()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RobotPackage.Literals.EVENT__ONLEAVE,
+				 RobotFactory.eINSTANCE.createStop()));
 
 		newChildDescriptors.add
 			(createChildParameter

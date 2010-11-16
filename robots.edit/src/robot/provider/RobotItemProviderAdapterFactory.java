@@ -582,6 +582,29 @@ public class RobotItemProviderAdapterFactory extends RobotAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link robot.Stop} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StopItemProvider stopItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link robot.Stop}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStopAdapter() {
+		if (stopItemProvider == null) {
+			stopItemProvider = new StopItemProvider(this);
+		}
+
+		return stopItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -702,6 +725,7 @@ public class RobotItemProviderAdapterFactory extends RobotAdapterFactory impleme
 		if (echoItemProvider != null) echoItemProvider.dispose();
 		if (varItemProvider != null) varItemProvider.dispose();
 		if (variableItemProvider != null) variableItemProvider.dispose();
+		if (stopItemProvider != null) stopItemProvider.dispose();
 	}
 
 }

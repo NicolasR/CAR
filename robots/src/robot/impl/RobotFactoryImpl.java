@@ -83,6 +83,7 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 			case RobotPackage.ECHO: return (EObject)createEcho();
 			case RobotPackage.VAR: return (EObject)createVar();
 			case RobotPackage.VARIABLE: return (EObject)createVariable();
+			case RobotPackage.STOP: return (EObject)createStop();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -340,6 +341,16 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	public Variable createVariable() {
 		VariableImpl variable = new VariableImpl();
 		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Stop createStop() {
+		StopImpl stop = new StopImpl();
+		return stop;
 	}
 
 	/**

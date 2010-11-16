@@ -31,6 +31,7 @@ import robot.RobotFactory;
 import robot.RobotPackage;
 import robot.Sensor;
 import robot.Sequence;
+import robot.Stop;
 import robot.TBoolean;
 import robot.TFloat;
 import robot.TInteger;
@@ -201,6 +202,13 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * @generated
 	 */
 	private EClass variableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stopEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -687,6 +695,15 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStop() {
+		return stopEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEOperator() {
 		return eOperatorEEnum;
 	}
@@ -795,6 +812,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 
+		stopEClass = createEClass(STOP);
+
 		// Create enums
 		eOperatorEEnum = createEEnum(EOPERATOR);
 		eSensorEEnum = createEEnum(ESENSOR);
@@ -845,6 +864,7 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		echoEClass.getESuperTypes().add(this.getOperation());
 		varEClass.getESuperTypes().add(this.getOperation());
 		variableEClass.getESuperTypes().add(this.getValues());
+		stopEClass.getESuperTypes().add(this.getMovement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(missionEClass, Mission.class, "Mission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -914,6 +934,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(stopEClass, Stop.class, "Stop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(eOperatorEEnum, EOperator.class, "EOperator");
 		addEEnumLiteral(eOperatorEEnum, EOperator.GT);
@@ -924,8 +946,22 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		addEEnumLiteral(eOperatorEEnum, EOperator.LTE);
 
 		initEEnum(eSensorEEnum, ESensor.class, "ESensor");
-		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FLF);
 		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FRF);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FRB);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_R);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_BR);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_BL);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_L);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FLB);
+		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FLF);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FRF);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FRB);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_R);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_BR);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_BL);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_L);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FLB);
+		addEEnumLiteral(eSensorEEnum, ESensor.LIGHT_FLF);
 
 		// Create resource
 		createResource(eNS_URI);

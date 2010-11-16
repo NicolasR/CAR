@@ -731,6 +731,34 @@ public interface RobotPackage extends EPackage {
 	int VARIABLE_FEATURE_COUNT = VALUES_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link robot.impl.StopImpl <em>Stop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see robot.impl.StopImpl
+	 * @see robot.impl.RobotPackageImpl#getStop()
+	 * @generated
+	 */
+	int STOP = 22;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP__DURATION = MOVEMENT__DURATION;
+
+	/**
+	 * The number of structural features of the '<em>Stop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP_FEATURE_COUNT = MOVEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link robot.EOperator <em>EOperator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -738,7 +766,7 @@ public interface RobotPackage extends EPackage {
 	 * @see robot.impl.RobotPackageImpl#getEOperator()
 	 * @generated
 	 */
-	int EOPERATOR = 22;
+	int EOPERATOR = 23;
 
 	/**
 	 * The meta object id for the '{@link robot.ESensor <em>ESensor</em>}' enum.
@@ -748,7 +776,7 @@ public interface RobotPackage extends EPackage {
 	 * @see robot.impl.RobotPackageImpl#getESensor()
 	 * @generated
 	 */
-	int ESENSOR = 23;
+	int ESENSOR = 24;
 
 
 	/**
@@ -1225,6 +1253,16 @@ public interface RobotPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
+	 * Returns the meta object for class '{@link robot.Stop <em>Stop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Stop</em>'.
+	 * @see robot.Stop
+	 * @generated
+	 */
+	EClass getStop();
+
+	/**
 	 * Returns the meta object for enum '{@link robot.EOperator <em>EOperator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1669,6 +1707,16 @@ public interface RobotPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.StopImpl <em>Stop</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.StopImpl
+		 * @see robot.impl.RobotPackageImpl#getStop()
+		 * @generated
+		 */
+		EClass STOP = eINSTANCE.getStop();
 
 		/**
 		 * The meta object literal for the '{@link robot.EOperator <em>EOperator</em>}' enum.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0" xsi:schemaLocation="http://robot/1.0 robot.ecore">
+<robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0">
   <Sequence>
     <Operations xsi:type="robot:Var" Name="threshold">
       <Value xsi:type="robot:TInteger" Value="300"/>
@@ -31,7 +31,7 @@
           <Variable xsi:type="robot:Variable" Name="threshold"/>
           <Operator/>
         </OR>
-        <Variable xsi:type="robot:Sensor"/>
+        <Variable xsi:type="robot:Sensor" name="distanceFRF"/>
         <Variable xsi:type="robot:Variable" Name="threshold"/>
         <Operator/>
       </Condition>
