@@ -30,8 +30,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="At" lowerBound="1" eType="#//Operation"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Onleave" lowerBound="1"
-        eType="#//Operation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Onleave" eType="#//Operation"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Condition" lowerBound="1"
         eType="#//Condition" containment="true"/>
   </eClassifiers>
@@ -103,4 +103,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Stop" eSuperTypes="#//Movement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sleep" eSuperTypes="#//Movement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Whenever" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Condition" lowerBound="1"
+        eType="#//Condition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Whenever" lowerBound="1"
+        eType="#//Operation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Else" eType="#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Affectation" eSuperTypes="#//Var"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Declaration" eSuperTypes="#//Var"/>
 </ecore:EPackage>
