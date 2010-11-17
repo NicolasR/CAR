@@ -111,12 +111,15 @@ public class AlternativeImpl extends OperationImpl implements Alternative {
 	public String toUrbiString(String indent) {
 		 String returnvalue = "";
 
-		 returnvalue += indent+"if("+this.getCondition().toUrbiString()+")\n";
+		 returnvalue += indent+"if"+this.getCondition().toUrbiString()+"\n";
 		 returnvalue += indent+"{\n";
 		 returnvalue += this.getConsequence().toUrbiString(indent+"\t")+"\n";
 		 returnvalue += indent+"}\n";
-		 returnvalue += indent+"else\n";
-		 returnvalue += this.getAlternative().toUrbiString(indent+"\t")+"\n";
+		 if (this.getAlternative() != null)
+		 {
+			 returnvalue += indent+"else\n";
+			 returnvalue += this.getAlternative().toUrbiString(indent+"\t")+"\n";
+		 }
 		 return returnvalue;
 	}
 

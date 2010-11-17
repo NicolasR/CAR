@@ -111,7 +111,7 @@ public class WheneverImpl extends OperationImpl implements Whenever {
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
 	
-		returnvalue += indent+"whenever ("+this.getCondition().toUrbiString()+")\n";
+		returnvalue += indent+"whenever"+this.getCondition().toUrbiString()+"\n";
 		returnvalue += indent+"{\n";
 		returnvalue += this.getWhenever().toUrbiString(indent+"\t")+"\n";
 		returnvalue += indent+"}\n";

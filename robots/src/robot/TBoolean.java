@@ -15,7 +15,7 @@ package robot;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link robot.TBoolean#isValue <em>Value</em>}</li>
+ *   <li>{@link robot.TBoolean#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,21 +33,21 @@ public interface TBoolean extends Values {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(boolean)
+	 * @see #setValue(Boolean)
 	 * @see robot.RobotPackage#getTBoolean_Value()
 	 * @model
 	 * @generated
 	 */
-	boolean isValue();
+	Boolean getValue();
 
 	/**
-	 * Sets the value of the '{@link robot.TBoolean#isValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link robot.TBoolean#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(boolean value);
+	void setValue(Boolean value);
 
 } // TBoolean

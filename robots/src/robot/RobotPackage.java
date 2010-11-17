@@ -378,49 +378,13 @@ public interface RobotPackage extends EPackage {
 	int CONDITION = 10;
 
 	/**
-	 * The feature id for the '<em><b>AND</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__AND = 0;
-
-	/**
-	 * The feature id for the '<em><b>OR</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__OR = 1;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__VARIABLE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Operator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__OPERATOR = 3;
-
-	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = 4;
+	int CONDITION_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link robot.impl.ValuesImpl <em>Values</em>}' class.
@@ -944,6 +908,80 @@ public interface RobotPackage extends EPackage {
 	int WHILE_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link robot.impl.ValueImpl <em>Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see robot.impl.ValueImpl
+	 * @see robot.impl.RobotPackageImpl#getValue()
+	 * @generated
+	 */
+	int VALUE = 28;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE__VARIABLE = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link robot.impl.CompareImpl <em>Compare</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see robot.impl.CompareImpl
+	 * @see robot.impl.RobotPackageImpl#getCompare()
+	 * @generated
+	 */
+	int COMPARE = 29;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARE__OPERATOR = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Condition2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARE__CONDITION2 = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Condition1</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARE__CONDITION1 = CONDITION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Compare</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARE_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 3;
+
+	/**
 	 * The meta object id for the '{@link robot.EOperator <em>EOperator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -951,7 +989,7 @@ public interface RobotPackage extends EPackage {
 	 * @see robot.impl.RobotPackageImpl#getEOperator()
 	 * @generated
 	 */
-	int EOPERATOR = 28;
+	int EOPERATOR = 30;
 
 	/**
 	 * The meta object id for the '{@link robot.ESensor <em>ESensor</em>}' enum.
@@ -961,7 +999,7 @@ public interface RobotPackage extends EPackage {
 	 * @see robot.impl.RobotPackageImpl#getESensor()
 	 * @generated
 	 */
-	int ESENSOR = 29;
+	int ESENSOR = 31;
 
 
 	/**
@@ -1174,50 +1212,6 @@ public interface RobotPackage extends EPackage {
 	EClass getCondition();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link robot.Condition#getAND <em>AND</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>AND</em>'.
-	 * @see robot.Condition#getAND()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_AND();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link robot.Condition#getOR <em>OR</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>OR</em>'.
-	 * @see robot.Condition#getOR()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_OR();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link robot.Condition#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable</em>'.
-	 * @see robot.Condition#getVariable()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_Variable();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link robot.Condition#getOperator <em>Operator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Operator</em>'.
-	 * @see robot.Condition#getOperator()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_Operator();
-
-	/**
 	 * Returns the meta object for class '{@link robot.Values <em>Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1322,11 +1316,11 @@ public interface RobotPackage extends EPackage {
 	EClass getTBoolean();
 
 	/**
-	 * Returns the meta object for the attribute '{@link robot.TBoolean#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link robot.TBoolean#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see robot.TBoolean#isValue()
+	 * @see robot.TBoolean#getValue()
 	 * @see #getTBoolean()
 	 * @generated
 	 */
@@ -1553,6 +1547,70 @@ public interface RobotPackage extends EPackage {
 	EReference getWhile_Condition();
 
 	/**
+	 * Returns the meta object for class '{@link robot.Value <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Value</em>'.
+	 * @see robot.Value
+	 * @generated
+	 */
+	EClass getValue();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link robot.Value#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
+	 * @see robot.Value#getVariable()
+	 * @see #getValue()
+	 * @generated
+	 */
+	EReference getValue_Variable();
+
+	/**
+	 * Returns the meta object for class '{@link robot.Compare <em>Compare</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Compare</em>'.
+	 * @see robot.Compare
+	 * @generated
+	 */
+	EClass getCompare();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link robot.Compare#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Operator</em>'.
+	 * @see robot.Compare#getOperator()
+	 * @see #getCompare()
+	 * @generated
+	 */
+	EReference getCompare_Operator();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link robot.Compare#getCondition2 <em>Condition2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Condition2</em>'.
+	 * @see robot.Compare#getCondition2()
+	 * @see #getCompare()
+	 * @generated
+	 */
+	EReference getCompare_Condition2();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link robot.Compare#getCondition1 <em>Condition1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Condition1</em>'.
+	 * @see robot.Compare#getCondition1()
+	 * @see #getCompare()
+	 * @generated
+	 */
+	EReference getCompare_Condition1();
+
+	/**
 	 * Returns the meta object for enum '{@link robot.EOperator <em>EOperator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1775,38 +1833,6 @@ public interface RobotPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONDITION = eINSTANCE.getCondition();
-
-		/**
-		 * The meta object literal for the '<em><b>AND</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__AND = eINSTANCE.getCondition_AND();
-
-		/**
-		 * The meta object literal for the '<em><b>OR</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__OR = eINSTANCE.getCondition_OR();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__VARIABLE = eINSTANCE.getCondition_Variable();
-
-		/**
-		 * The meta object literal for the '<em><b>Operator</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__OPERATOR = eINSTANCE.getCondition_Operator();
 
 		/**
 		 * The meta object literal for the '{@link robot.impl.ValuesImpl <em>Values</em>}' class.
@@ -2097,6 +2123,58 @@ public interface RobotPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WHILE__CONDITION = eINSTANCE.getWhile_Condition();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.ValueImpl <em>Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.ValueImpl
+		 * @see robot.impl.RobotPackageImpl#getValue()
+		 * @generated
+		 */
+		EClass VALUE = eINSTANCE.getValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VALUE__VARIABLE = eINSTANCE.getValue_Variable();
+
+		/**
+		 * The meta object literal for the '{@link robot.impl.CompareImpl <em>Compare</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see robot.impl.CompareImpl
+		 * @see robot.impl.RobotPackageImpl#getCompare()
+		 * @generated
+		 */
+		EClass COMPARE = eINSTANCE.getCompare();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPARE__OPERATOR = eINSTANCE.getCompare_Operator();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition2</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPARE__CONDITION2 = eINSTANCE.getCompare_Condition2();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition1</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPARE__CONDITION1 = eINSTANCE.getCompare_Condition1();
 
 		/**
 		 * The meta object literal for the '{@link robot.EOperator <em>EOperator</em>}' enum.

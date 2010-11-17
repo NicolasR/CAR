@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import robot.RobotPackage;
+import robot.TBoolean;
 import robot.TFloat;
 import robot.TInteger;
 import robot.TString;
@@ -76,7 +77,12 @@ public class ValuesImpl extends CDOObjectImpl implements Values {
 		else if (this instanceof TString)
 		{
 			TString value = (TString)this;
-			retour = value.toString();
+			retour = value.getValue();
+		}
+		else if (this instanceof TBoolean)
+		{
+			TBoolean value = ((TBoolean)this);
+			retour = Boolean.toString(value.getValue());
 		}
 		else if (this instanceof robot.Sensor)
 		retour = ((robot.Sensor)this).toString();

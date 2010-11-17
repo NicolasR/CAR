@@ -33,12 +33,12 @@ public interface TFloat extends Values {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(float)
+	 * @see #setValue(Float)
 	 * @see robot.RobotPackage#getTFloat_Value()
 	 * @model
 	 * @generated
 	 */
-	float getValue();
+	Float getValue();
 
 	/**
 	 * Sets the value of the '{@link robot.TFloat#getValue <em>Value</em>}' attribute.
@@ -48,6 +48,6 @@ public interface TFloat extends Values {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(float value);
+	void setValue(Float value);
 
 } // TFloat

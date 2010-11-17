@@ -30,7 +30,7 @@ public class SimpleToURBI
     EList<Operation> listOperation = programme.getOperations();
     for (Operation operation : listOperation) {
     stringBuffer.append(TEXT_2);
-    stringBuffer.append(operation.toUrbiString(""));
+    stringBuffer.append(operation.toUrbiString("\t"));
     } 
     stringBuffer.append(TEXT_3);
     stringBuffer.append(TEXT_4);

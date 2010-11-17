@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import robot.Affectation;
 import robot.Alternative;
 import robot.Backward;
+import robot.Compare;
 import robot.Condition;
 import robot.Declaration;
 import robot.Different;
@@ -41,6 +42,7 @@ import robot.TInteger;
 import robot.TString;
 import robot.TurnLeft;
 import robot.TurnRight;
+import robot.Value;
 import robot.Values;
 import robot.Var;
 import robot.Variable;
@@ -249,6 +251,20 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * @generated
 	 */
 	private EClass whileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass valueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass compareEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -503,42 +519,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 */
 	public EClass getCondition() {
 		return conditionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCondition_AND() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCondition_OR() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCondition_Variable() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCondition_Operator() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -834,6 +814,60 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getValue() {
+		return valueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getValue_Variable() {
+		return (EReference)valueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCompare() {
+		return compareEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompare_Operator() {
+		return (EReference)compareEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompare_Condition2() {
+		return (EReference)compareEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompare_Condition1() {
+		return (EReference)compareEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEOperator() {
 		return eOperatorEEnum;
 	}
@@ -905,10 +939,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		createEReference(eventEClass, EVENT__CONDITION);
 
 		conditionEClass = createEClass(CONDITION);
-		createEReference(conditionEClass, CONDITION__AND);
-		createEReference(conditionEClass, CONDITION__OR);
-		createEReference(conditionEClass, CONDITION__VARIABLE);
-		createEReference(conditionEClass, CONDITION__OPERATOR);
 
 		valuesEClass = createEClass(VALUES);
 
@@ -958,6 +988,14 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		whileEClass = createEClass(WHILE);
 		createEReference(whileEClass, WHILE__OPERATION);
 		createEReference(whileEClass, WHILE__CONDITION);
+
+		valueEClass = createEClass(VALUE);
+		createEReference(valueEClass, VALUE__VARIABLE);
+
+		compareEClass = createEClass(COMPARE);
+		createEReference(compareEClass, COMPARE__OPERATOR);
+		createEReference(compareEClass, COMPARE__CONDITION2);
+		createEReference(compareEClass, COMPARE__CONDITION1);
 
 		// Create enums
 		eOperatorEEnum = createEEnum(EOPERATOR);
@@ -1015,6 +1053,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		affectationEClass.getESuperTypes().add(this.getVar());
 		declarationEClass.getESuperTypes().add(this.getVar());
 		whileEClass.getESuperTypes().add(this.getOperation());
+		valueEClass.getESuperTypes().add(this.getCondition());
+		compareEClass.getESuperTypes().add(this.getCondition());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(missionEClass, Mission.class, "Mission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1038,7 +1078,7 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 
 		initEClass(alternativeEClass, Alternative.class, "Alternative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAlternative_Consequence(), this.getOperation(), null, "Consequence", null, 1, 1, Alternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAlternative_Alternative(), this.getOperation(), null, "Alternative", null, 1, 1, Alternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAlternative_Alternative(), this.getOperation(), null, "Alternative", null, 0, 1, Alternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAlternative_Condition(), this.getCondition(), null, "Condition", null, 1, 1, Alternative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1047,10 +1087,6 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEReference(getEvent_Condition(), this.getCondition(), null, "Condition", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCondition_AND(), this.getCondition(), null, "AND", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_OR(), this.getCondition(), null, "OR", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_Variable(), this.getValues(), null, "Variable", null, 2, 2, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_Operator(), this.getOperator(), null, "Operator", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(valuesEClass, Values.class, "Values", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1064,10 +1100,10 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEAttribute(getTString_Value(), ecorePackage.getEString(), "Value", null, 0, 1, TString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tFloatEClass, TFloat.class, "TFloat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTFloat_Value(), ecorePackage.getEFloat(), "Value", null, 0, 1, TFloat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTFloat_Value(), ecorePackage.getEFloatObject(), "Value", null, 0, 1, TFloat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tBooleanEClass, TBoolean.class, "TBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTBoolean_Value(), ecorePackage.getEBoolean(), "Value", null, 0, 1, TBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTBoolean_Value(), ecorePackage.getEBooleanObject(), "Value", null, 0, 1, TBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, Operator.class, "Operator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperator_Type(), this.getEOperator(), "type", null, 0, 1, Operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1101,6 +1137,14 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEReference(getWhile_Operation(), this.getOperation(), null, "Operation", null, 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWhile_Condition(), this.getCondition(), null, "Condition", null, 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getValue_Variable(), this.getValues(), null, "Variable", null, 1, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(compareEClass, Compare.class, "Compare", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompare_Operator(), this.getOperator(), null, "Operator", null, 1, 1, Compare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompare_Condition2(), this.getCondition(), null, "Condition2", null, 1, 1, Compare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompare_Condition1(), this.getCondition(), null, "Condition1", null, 1, 1, Compare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(eOperatorEEnum, EOperator.class, "EOperator");
 		addEEnumLiteral(eOperatorEEnum, EOperator.GT);
@@ -1109,6 +1153,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		addEEnumLiteral(eOperatorEEnum, EOperator.DIFF);
 		addEEnumLiteral(eOperatorEEnum, EOperator.GTE);
 		addEEnumLiteral(eOperatorEEnum, EOperator.LTE);
+		addEEnumLiteral(eOperatorEEnum, EOperator.AND);
+		addEEnumLiteral(eOperatorEEnum, EOperator.OR);
 
 		initEEnum(eSensorEEnum, ESensor.class, "ESensor");
 		addEEnumLiteral(eSensorEEnum, ESensor.DISTANCE_FRF);

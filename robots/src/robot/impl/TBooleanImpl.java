@@ -18,7 +18,7 @@ import robot.TBoolean;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link robot.impl.TBooleanImpl#isValue <em>Value</em>}</li>
+ *   <li>{@link robot.impl.TBooleanImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,7 +49,7 @@ public class TBooleanImpl extends ValuesImpl implements TBoolean {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
+	public Boolean getValue() {
 		return (Boolean)eGet(RobotPackage.Literals.TBOOLEAN__VALUE, true);
 	}
 
@@ -58,7 +58,7 @@ public class TBooleanImpl extends ValuesImpl implements TBoolean {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(boolean newValue) {
+	public void setValue(Boolean newValue) {
 		eSet(RobotPackage.Literals.TBOOLEAN__VALUE, newValue);
 	}
 

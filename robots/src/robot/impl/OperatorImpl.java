@@ -82,7 +82,7 @@ public class OperatorImpl extends CDOObjectImpl implements Operator {
 	* @generated NOT
 	*/
 	public String toUrbiString() {
-		String returnvalue = "";
+		String returnvalue = "//Not implemented yet";
 		EOperator type = this.getType();
 		if(type == EOperator.DIFF)
 			returnvalue = "!=";
@@ -94,7 +94,11 @@ public class OperatorImpl extends CDOObjectImpl implements Operator {
 			returnvalue = "<";
 		else if (type == EOperator.LTE)
 			returnvalue = "<=";
-		else
+		else if (type == EOperator.AND)
+			returnvalue = "&&";
+		else if (type == EOperator.OR)
+			returnvalue = "||";
+		else if (type == EOperator.EQ)
 			returnvalue = "==";
 		return returnvalue;
 	}

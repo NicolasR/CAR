@@ -9,4 +9,9 @@ load("e-puck/e-puck.u");
 
 // Program
 {
+	if(false < (2 > 1))
+	{
+		robot.forward();
+	}
+
 }

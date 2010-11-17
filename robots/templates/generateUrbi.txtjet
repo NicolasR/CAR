@@ -15,6 +15,6 @@ load("e-puck/e-puck.u");
 <%Sequence programme = mission.getSequence();%>
 <%EList<Operation> listOperation = programme.getOperations();%>
 <%for (Operation operation : listOperation) {%>
-<%=operation.toUrbiString("")%>
+<%=operation.toUrbiString("\t")%>
 <%} %>
 }

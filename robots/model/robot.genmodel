@@ -16,6 +16,8 @@
       <genEnumLiterals ecoreEnumLiteral="robot.ecore#//EOperator/DIFF"/>
       <genEnumLiterals ecoreEnumLiteral="robot.ecore#//EOperator/GTE"/>
       <genEnumLiterals ecoreEnumLiteral="robot.ecore#//EOperator/LTE"/>
+      <genEnumLiterals ecoreEnumLiteral="robot.ecore#//EOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="robot.ecore#//EOperator/OR"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="robot.ecore#//ESensor">
       <genEnumLiterals ecoreEnumLiteral="robot.ecore#//ESensor/distanceFRF"/>
@@ -59,12 +61,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Event/Onleave"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Event/Condition"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//Condition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Condition/AND"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Condition/OR"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Condition/Variable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Condition/Operator"/>
-    </genClasses>
+    <genClasses ecoreClass="robot.ecore#//Condition"/>
     <genClasses ecoreClass="robot.ecore#//Values"/>
     <genClasses ecoreClass="robot.ecore#//Sensor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Sensor/name"/>
@@ -107,6 +104,14 @@
     <genClasses ecoreClass="robot.ecore#//While">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//While/Operation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//While/Condition"/>
+    </genClasses>
+    <genClasses ecoreClass="robot.ecore#//Value">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Value/Variable"/>
+    </genClasses>
+    <genClasses ecoreClass="robot.ecore#//Compare">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Compare/Operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Compare/Condition2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Compare/Condition1"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

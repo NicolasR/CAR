@@ -89,6 +89,8 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 			case RobotPackage.AFFECTATION: return (EObject)createAffectation();
 			case RobotPackage.DECLARATION: return (EObject)createDeclaration();
 			case RobotPackage.WHILE: return (EObject)createWhile();
+			case RobotPackage.VALUE: return (EObject)createValue();
+			case RobotPackage.COMPARE: return (EObject)createCompare();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -406,6 +408,26 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	public While createWhile() {
 		WhileImpl while_ = new WhileImpl();
 		return while_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Value createValue() {
+		ValueImpl value = new ValueImpl();
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Compare createCompare() {
+		CompareImpl compare = new CompareImpl();
+		return compare;
 	}
 
 	/**

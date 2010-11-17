@@ -49,7 +49,7 @@ public class TFloatImpl extends ValuesImpl implements TFloat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getValue() {
+	public Float getValue() {
 		return (Float)eGet(RobotPackage.Literals.TFLOAT__VALUE, true);
 	}
 
@@ -58,7 +58,7 @@ public class TFloatImpl extends ValuesImpl implements TFloat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(float newValue) {
+	public void setValue(Float newValue) {
 		eSet(RobotPackage.Literals.TFLOAT__VALUE, newValue);
 	}
 

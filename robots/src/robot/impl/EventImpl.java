@@ -111,7 +111,7 @@ public class EventImpl extends OperationImpl implements Event {
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
 	
-		returnvalue += indent+"at("+this.getCondition().toUrbiString()+")\n";
+		returnvalue += indent+"at"+this.getCondition().toUrbiString()+"\n";
 		returnvalue += indent+"{\n";
 		returnvalue += this.getAt().toUrbiString(indent+"\t")+"\n";
 		returnvalue += indent+"}\n";

@@ -80,7 +80,23 @@ public enum EOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LTE(5, "LTE", "LTE");
+	LTE(5, "LTE", "LTE"), /**
+	 * The '<em><b>AND</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AND_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	AND(6, "AND", "AND"), /**
+	 * The '<em><b>OR</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OR(7, "OR", "OR");
 
 	/**
 	 * The '<em><b>GT</b></em>' literal value.
@@ -173,6 +189,36 @@ public enum EOperator implements Enumerator {
 	public static final int LTE_VALUE = 5;
 
 	/**
+	 * The '<em><b>AND</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>AND</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AND
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AND_VALUE = 6;
+
+	/**
+	 * The '<em><b>OR</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OR</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OR
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OR_VALUE = 7;
+
+	/**
 	 * An array of all the '<em><b>EOperator</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -186,6 +232,8 @@ public enum EOperator implements Enumerator {
 			DIFF,
 			GTE,
 			LTE,
+			AND,
+			OR,
 		};
 
 	/**
@@ -242,6 +290,8 @@ public enum EOperator implements Enumerator {
 			case DIFF_VALUE: return DIFF;
 			case GTE_VALUE: return GTE;
 			case LTE_VALUE: return LTE;
+			case AND_VALUE: return AND;
+			case OR_VALUE: return OR;
 		}
 		return null;
 	}

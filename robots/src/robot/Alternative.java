@@ -63,7 +63,7 @@ public interface Alternative extends Operation {
 	 * @return the value of the '<em>Alternative</em>' containment reference.
 	 * @see #setAlternative(Operation)
 	 * @see robot.RobotPackage#getAlternative_Alternative()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Operation getAlternative();
