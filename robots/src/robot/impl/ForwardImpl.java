@@ -42,6 +42,7 @@ public class ForwardImpl extends MovementImpl implements Forward {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant au mouvement Forward
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

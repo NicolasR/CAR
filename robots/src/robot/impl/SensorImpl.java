@@ -65,6 +65,7 @@ public class SensorImpl extends ValuesImpl implements Sensor {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant aux capteurs
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

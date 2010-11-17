@@ -39,5 +39,22 @@ public class StopImpl extends MovementImpl implements Stop {
 	protected EClass eStaticClass() {
 		return RobotPackage.Literals.STOP;
 	}
+	
+	/**
+	* <!-- begin-user-doc -->
+	* Code correspondant au mouvement Stop
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
+		String returnvalue = "";
+		float time = this.getDuration();
 
+		returnvalue += indent+"robot.wheels.speed = 0;";
+		if (time > 0)
+		{
+			returnvalue += "\n" + indent+"sleep("+time+");\n";
+		}
+		return returnvalue;
+	}
 } //StopImpl

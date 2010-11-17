@@ -42,6 +42,7 @@ public class BackwardImpl extends MovementImpl implements Backward {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant au mouvement Backward
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

@@ -86,8 +86,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 			case RobotPackage.STOP: return (EObject)createStop();
 			case RobotPackage.SLEEP: return (EObject)createSleep();
 			case RobotPackage.WHENEVER: return (EObject)createWhenever();
-			case RobotPackage.AFFECT_VAR: return (EObject)createAffectVar();
-			case RobotPackage.DECLARE_VAR: return (EObject)createDeclareVar();
+			case RobotPackage.AFFECTATION: return (EObject)createAffectation();
+			case RobotPackage.DECLARATION: return (EObject)createDeclaration();
+			case RobotPackage.WHILE: return (EObject)createWhile();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -382,9 +383,9 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AffectVar createAffectVar() {
-		AffectVarImpl affectVar = new AffectVarImpl();
-		return affectVar;
+	public Affectation createAffectation() {
+		AffectationImpl affectation = new AffectationImpl();
+		return affectation;
 	}
 
 	/**
@@ -392,9 +393,19 @@ public class RobotFactoryImpl extends EFactoryImpl implements RobotFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DeclareVar createDeclareVar() {
-		DeclareVarImpl declareVar = new DeclareVarImpl();
-		return declareVar;
+	public Declaration createDeclaration() {
+		DeclarationImpl declaration = new DeclarationImpl();
+		return declaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public While createWhile() {
+		WhileImpl while_ = new WhileImpl();
+		return while_;
 	}
 
 	/**

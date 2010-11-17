@@ -129,6 +129,7 @@ public class ConditionImpl extends CDOObjectImpl implements Condition {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant a une condition (ex: condition de boucle)
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

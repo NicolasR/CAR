@@ -15,12 +15,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import robot.Affectation;
-import robot.AffectVar;
 import robot.Alternative;
 import robot.Backward;
 import robot.Condition;
 import robot.Declaration;
-import robot.DeclareVar;
 import robot.Different;
 import robot.EOperator;
 import robot.ESensor;
@@ -236,14 +234,21 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass affectVarEClass = null;
+	private EClass affectationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass declareVarEClass = null;
+	private EClass declarationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass whileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -784,8 +789,8 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAffectVar() {
-		return affectVarEClass;
+	public EClass getAffectation() {
+		return affectationEClass;
 	}
 
 	/**
@@ -793,8 +798,35 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDeclareVar() {
-		return declareVarEClass;
+	public EClass getDeclaration() {
+		return declarationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWhile() {
+		return whileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWhile_Operation() {
+		return (EReference)whileEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWhile_Condition() {
+		return (EReference)whileEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -919,9 +951,13 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		createEReference(wheneverEClass, WHENEVER__WHENEVER);
 		createEReference(wheneverEClass, WHENEVER__ELSE);
 
-		affectVarEClass = createEClass(AFFECT_VAR);
+		affectationEClass = createEClass(AFFECTATION);
 
-		declareVarEClass = createEClass(DECLARE_VAR);
+		declarationEClass = createEClass(DECLARATION);
+
+		whileEClass = createEClass(WHILE);
+		createEReference(whileEClass, WHILE__OPERATION);
+		createEReference(whileEClass, WHILE__CONDITION);
 
 		// Create enums
 		eOperatorEEnum = createEEnum(EOPERATOR);
@@ -976,8 +1012,9 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		stopEClass.getESuperTypes().add(this.getMovement());
 		sleepEClass.getESuperTypes().add(this.getMovement());
 		wheneverEClass.getESuperTypes().add(this.getOperation());
-		affectVarEClass.getESuperTypes().add(this.getVar());
-		declareVarEClass.getESuperTypes().add(this.getVar());
+		affectationEClass.getESuperTypes().add(this.getVar());
+		declarationEClass.getESuperTypes().add(this.getVar());
+		whileEClass.getESuperTypes().add(this.getOperation());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(missionEClass, Mission.class, "Mission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1054,11 +1091,15 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 		initEClass(wheneverEClass, Whenever.class, "Whenever", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWhenever_Condition(), this.getCondition(), null, "Condition", null, 1, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWhenever_Whenever(), this.getOperation(), null, "Whenever", null, 1, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWhenever_Else(), this.getOperation(), null, "Else", null, 0, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWhenever_Else(), this.getOperation(), null, "Else", null, 0, 1, Whenever.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(affectVarEClass, AffectVar.class, "AffectVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(affectationEClass, Affectation.class, "Affectation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(declareVarEClass, DeclareVar.class, "DeclareVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(declarationEClass, Declaration.class, "Declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(whileEClass, While.class, "While", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWhile_Operation(), this.getOperation(), null, "Operation", null, 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWhile_Condition(), this.getCondition(), null, "Condition", null, 1, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(eOperatorEEnum, EOperator.class, "EOperator");
@@ -1089,6 +1130,26 @@ public class RobotPackageImpl extends EPackageImpl implements RobotPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";		
+		addAnnotation
+		  (getWhile_Operation(), 
+		   source, 
+		   new String[] {
+			 "name", "Operation"
+		   });
 	}
 
 } //RobotPackageImpl

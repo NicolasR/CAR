@@ -64,6 +64,7 @@ public class VariableImpl extends ValuesImpl implements Variable {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant à la lecture de variable
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

@@ -9,5 +9,4 @@ load("e-puck/e-puck.u");
 
 // Program
 {
-robot.forward();
 }

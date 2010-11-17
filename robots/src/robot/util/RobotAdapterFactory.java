@@ -172,12 +172,16 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 				return createWheneverAdapter();
 			}
 			@Override
-			public Adapter caseAffectVar(AffectVar object) {
-				return createAffectVarAdapter();
+			public Adapter caseAffectation(Affectation object) {
+				return createAffectationAdapter();
 			}
 			@Override
-			public Adapter caseDeclareVar(DeclareVar object) {
-				return createDeclareVarAdapter();
+			public Adapter caseDeclaration(Declaration object) {
+				return createDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseWhile(While object) {
+				return createWhileAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -550,30 +554,44 @@ public class RobotAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.AffectVar <em>Affect Var</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.Affectation <em>Affectation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.AffectVar
+	 * @see robot.Affectation
 	 * @generated
 	 */
-	public Adapter createAffectVarAdapter() {
+	public Adapter createAffectationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link robot.DeclareVar <em>Declare Var</em>}'.
+	 * Creates a new adapter for an object of class '{@link robot.Declaration <em>Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see robot.DeclareVar
+	 * @see robot.Declaration
 	 * @generated
 	 */
-	public Adapter createDeclareVarAdapter() {
+	public Adapter createDeclarationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link robot.While <em>While</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see robot.While
+	 * @generated
+	 */
+	public Adapter createWhileAdapter() {
 		return null;
 	}
 

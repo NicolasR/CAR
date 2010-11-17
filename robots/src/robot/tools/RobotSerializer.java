@@ -9,8 +9,6 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Map;
 
-import javax.swing.filechooser.FileNameExtensionFilter;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -20,8 +18,20 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import robot.Mission;
 import robot.RobotPackage;
 
+/**
+ * Effectue la génération du code Urbi à partir des missions définies
+ * @author Thibault DUPERRON
+ * @author Nicolas RIGNAULT
+ *
+ */
 public class RobotSerializer {
 
+	/**
+	 * Filtrage pour les extensions .xmi
+	 * @author Thibault DUPERRON
+	 * @author Nicolas RIGNAULT
+	 *
+	 */
 	class OnlyExt implements FilenameFilter {
 		  String ext;
 
@@ -34,6 +44,9 @@ public class RobotSerializer {
 		  }
 		}
 	
+	/**
+	 * Génère le code urbi pour tous les fichiers .xmi
+	 */
 	public void generateUrbi(){
 		//SimpleToHTML est le nom de la classe générée par JET à partir du template
 		SimpleToURBI urbicode = new SimpleToURBI();
@@ -72,6 +85,11 @@ public class RobotSerializer {
 		}
 	}
 	
+	/**
+	 * Charge une mission en mémoire
+	 * @param f le nom du fichier à charger
+	 * @return la mission associée
+	 */
 	public Mission load(File f) {
 		ResourceSet rs = new ResourceSetImpl();
 		Resource.Factory.Registry registry =

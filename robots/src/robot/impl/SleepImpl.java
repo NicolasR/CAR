@@ -39,5 +39,16 @@ public class SleepImpl extends MovementImpl implements Sleep {
 	protected EClass eStaticClass() {
 		return RobotPackage.Literals.SLEEP;
 	}
-
+	/**
+	* <!-- begin-user-doc -->
+	* Code correspondant au mouvement Sleep
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
+		String returnvalue = "";
+		float time = this.getDuration();
+		returnvalue += indent + "sleep(" + time + ");\n";
+		return returnvalue;
+	}
 } //SleepImpl

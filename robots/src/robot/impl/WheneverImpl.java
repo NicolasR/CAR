@@ -102,4 +102,27 @@ public class WheneverImpl extends OperationImpl implements Whenever {
 		eSet(RobotPackage.Literals.WHENEVER__ELSE, newElse);
 	}
 
+	 /**
+	* <!-- begin-user-doc -->
+	* Code correspondant au whenever
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
+		String returnvalue = "";
+	
+		returnvalue += indent+"whenever ("+this.getCondition().toUrbiString()+")\n";
+		returnvalue += indent+"{\n";
+		returnvalue += this.getWhenever().toUrbiString(indent+"\t")+"\n";
+		returnvalue += indent+"}\n";
+		if (this.getElse() != null)
+		{
+			returnvalue += indent+"else\n";
+			returnvalue += indent+"{\n";
+			returnvalue += this.getElse().toUrbiString(indent+"\t")+"\n";
+			returnvalue += indent+"};";
+		}
+		return returnvalue;
+	}
+	
 } //WheneverImpl

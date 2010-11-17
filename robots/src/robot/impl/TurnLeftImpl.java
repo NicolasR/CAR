@@ -42,6 +42,7 @@ public class TurnLeftImpl extends MovementImpl implements TurnLeft {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant au mouvement TurnLeft
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

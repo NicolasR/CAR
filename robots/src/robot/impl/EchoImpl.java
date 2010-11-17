@@ -62,4 +62,14 @@ public class EchoImpl extends OperationImpl implements Echo {
 		eSet(RobotPackage.Literals.ECHO__PARAM, newParam);
 	}
 
+	/**
+	* <!-- begin-user-doc -->
+	* Code correspondant à une déclaration de Variable
+	* <!-- end-user-doc -->
+	* @generated NOT
+	*/
+	public String toUrbiString(String indent) {
+		String value = this.getParam();
+		return indent + "echo(\""+value+"\");\n";
+	}
 } //EchoImpl

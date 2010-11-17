@@ -101,9 +101,10 @@ public class EventImpl extends OperationImpl implements Event {
 	public void setCondition(Condition newCondition) {
 		eSet(RobotPackage.Literals.EVENT__CONDITION, newCondition);
 	}
-
-	/**
+	
+	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant au at..onleave
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/
@@ -114,10 +115,13 @@ public class EventImpl extends OperationImpl implements Event {
 		returnvalue += indent+"{\n";
 		returnvalue += this.getAt().toUrbiString(indent+"\t")+"\n";
 		returnvalue += indent+"}\n";
-		returnvalue += indent+"onleave\n";
-		returnvalue += indent+"{\n";
-		returnvalue += this.getOnleave().toUrbiString(indent+"\t")+"\n";
-		returnvalue += indent+"};";
+		if (this.getOnleave() != null)
+		{
+			returnvalue += indent+"onleave\n";
+			returnvalue += indent+"{\n";
+			returnvalue += this.getOnleave().toUrbiString(indent+"\t")+"\n";
+			returnvalue += indent+"};";
+		}
 		return returnvalue;
 	}
 

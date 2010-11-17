@@ -77,6 +77,7 @@ public class OperatorImpl extends CDOObjectImpl implements Operator {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant au différents opérateurs
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

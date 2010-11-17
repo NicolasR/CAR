@@ -109,8 +109,19 @@
         eType="#//Condition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Whenever" lowerBound="1"
         eType="#//Operation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Else" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Else" eType="#//Operation"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AffectVar" eSuperTypes="#//Var"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DeclareVar" eSuperTypes="#//Var"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Affectation" eSuperTypes="#//Var"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Declaration" eSuperTypes="#//Var"/>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Operation" lowerBound="1"
+        eType="#//Operation" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Operation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Condition" lowerBound="1"
+        eType="#//Condition" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

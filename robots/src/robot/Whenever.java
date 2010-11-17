@@ -79,26 +79,26 @@ public interface Whenever extends Operation {
 	void setWhenever(Operation value);
 
 	/**
-	 * Returns the value of the '<em><b>Else</b></em>' reference.
+	 * Returns the value of the '<em><b>Else</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Else</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Else</em>' reference.
+	 * @return the value of the '<em>Else</em>' containment reference.
 	 * @see #setElse(Operation)
 	 * @see robot.RobotPackage#getWhenever_Else()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Operation getElse();
 
 	/**
-	 * Sets the value of the '{@link robot.Whenever#getElse <em>Else</em>}' reference.
+	 * Sets the value of the '{@link robot.Whenever#getElse <em>Else</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Else</em>' reference.
+	 * @param value the new value of the '<em>Else</em>' containment reference.
 	 * @see #getElse()
 	 * @generated
 	 */

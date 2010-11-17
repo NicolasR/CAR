@@ -57,6 +57,7 @@ public class ValuesImpl extends CDOObjectImpl implements Values {
 
 	 /**
 	* <!-- begin-user-doc -->
+	* Code correspondant aux valeurs
 	* <!-- end-user-doc -->
 	* @generated NOT
 	*/

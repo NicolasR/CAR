@@ -57,5 +57,19 @@ public class SequenceImpl extends OperationImpl implements Sequence {
 		return (EList<Operation>)eGet(RobotPackage.Literals.SEQUENCE__OPERATIONS, true);
 	}
 
-
+	/**
+	 * <!-- begin-user-doc -->
+	 * Code correspondant à une séquence d'instructions
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String toUrbiString(String indent) {
+		String retour = "";
+		retour += indent + "{\n";
+		for (Operation ope : ((Sequence)this).getOperations()) {
+			retour+= ope.toUrbiString(indent+"\t");
+		}
+		retour += "\n" + indent + "}";
+		return retour;
+	}
 } //SequenceImpl
