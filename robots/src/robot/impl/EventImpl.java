@@ -118,14 +118,16 @@ public class EventImpl extends OperationImpl implements Event {
 			returnvalue += indent+"at"+this.getCondition().toUrbiString()+"\n";
 		returnvalue += indent+"{\n";
 		returnvalue += this.getAt().toUrbiString(indent+"\t")+"\n";
-		returnvalue += indent+"}\n";
+		returnvalue += indent+"}";
 		if (this.getOnleave() != null)
 		{
-			returnvalue += indent+"onleave\n";
+			returnvalue += "\n"+indent+"onleave\n";
 			returnvalue += indent+"{\n";
 			returnvalue += this.getOnleave().toUrbiString(indent+"\t")+"\n";
 			returnvalue += indent+"};";
 		}
+		else
+			returnvalue += ";\n";
 		return returnvalue;
 	}
 
