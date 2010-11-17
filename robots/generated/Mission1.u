@@ -9,9 +9,35 @@ load("e-puck/e-puck.u");
 
 // Program
 {
-	if(false < (2 > 1))
+	while(true)
 	{
-		robot.forward();
-	}
+		{
+			robot.forward();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.turnLeft();
+			sleep(0.5);
+			robot.wheels.speed = 0;
+			robot.backward();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.turnRight();
+			sleep(0.5);
+			robot.wheels.speed = 0;
+			robot.backward();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.turnLeft();
+			sleep(0.5);
+			robot.wheels.speed = 0;
+			robot.forward();
+			sleep(1.0);
+			robot.wheels.speed = 0;
+			robot.turnRight();
+			sleep(0.5);
+			robot.wheels.speed = 0;
+
+		}
+	};
 
 }

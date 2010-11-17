@@ -47,14 +47,17 @@ public class RobotSerializer {
 	/**
 	 * Génère le code urbi pour tous les fichiers .xmi
 	 */
-	public void generateUrbi(){
+	public void generateUrbi(String src, String dest){
 		//SimpleToHTML est le nom de la classe générée par JET à partir du template
 		SimpleToURBI urbicode = new SimpleToURBI();
 		String srcdir = "model";
+		if (src != null)
+			srcdir = src;
 		String destdir = "generated";
+		if (dest != null)
+			destdir = dest;
 		FileWriter output;
 		BufferedWriter writer;
-		System.out.println("Creating URBI Code");
 		
 		try {
 			String[] fileList;
@@ -66,6 +69,12 @@ public class RobotSerializer {
 			};
 
 			fileList = directory.list(filter);
+			if (fileList.length == 0)
+			{
+				System.out.println("No file found: nothing to do");
+				System.exit(0);
+			}
+			System.out.println("Creating URBI Code");
 			for (String string : fileList) {
 				String newname = string.replace(".xmi", ".u");
 				output = new FileWriter(destdir+"/"+newname);
@@ -73,7 +82,6 @@ public class RobotSerializer {
 				System.out.println("Generate Urbi for "+string);
 				
 				//Appel de la méthode generate de la classe générée par JET
-				System.out.println(string);
 				File mission = new File(srcdir+"/"+string);
 				writer.write(urbicode.generate(load(mission)));
 				writer.close();
@@ -114,7 +122,10 @@ public class RobotSerializer {
 		// TODO Auto-generated method stub
 		RobotSerializer robotSerializer = new RobotSerializer();
 		//Mission mission = robotSerializer.load(new File("model/Mission2.xmi"));
-		robotSerializer.generateUrbi();
+		if (args.length >= 2 && new File(args[0]).exists() && new File(args[1]).exists())
+			robotSerializer.generateUrbi(args[0], args[1]);
+		else
+			robotSerializer.generateUrbi(null, null);
 	}
 
 }

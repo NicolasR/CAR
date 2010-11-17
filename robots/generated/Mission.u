@@ -9,5 +9,17 @@ load("e-puck/e-puck.u");
 
 // Program
 {
-	robot.forward();
+	while(distanceFRF.val < 300)
+	{
+		robot.forward();
+		sleep(0.2);
+		robot.wheels.speed = 0;
+
+	};
+
+	robot.backward();
+	sleep(1.0);
+	robot.wheels.speed = 0;
+
+	robot.turnLeft();
 }
