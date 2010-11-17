@@ -12,6 +12,7 @@ import robot.Alternative;
 import robot.Condition;
 import robot.Operation;
 import robot.RobotPackage;
+import robot.Value;
 
 /**
  * <!-- begin-user-doc -->
@@ -111,7 +112,10 @@ public class AlternativeImpl extends OperationImpl implements Alternative {
 	public String toUrbiString(String indent) {
 		 String returnvalue = "";
 
-		 returnvalue += indent+"if"+this.getCondition().toUrbiString()+"\n";
+		 if(this.getCondition() instanceof Value)
+			 returnvalue += indent+"if("+this.getCondition().toUrbiString()+")\n";
+		 else
+			 returnvalue += indent+"if"+this.getCondition().toUrbiString()+"\n";
 		 returnvalue += indent+"{\n";
 		 returnvalue += this.getConsequence().toUrbiString(indent+"\t")+"\n";
 		 returnvalue += indent+"}\n";

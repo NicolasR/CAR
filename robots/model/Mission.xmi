@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="ASCII"?>
 <robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0" xsi:schemaLocation="http://robot/1.0 robot.ecore">
   <Sequence>
-    <Operations xsi:type="robot:Forward"/>
+    <Operations xsi:type="robot:While">
+      <Operation xsi:type="robot:Forward" duration="0.2"/>
+      <Condition xsi:type="robot:Compare">
+        <Operator type="LT"/>
+        <Condition2 xsi:type="robot:Value">
+          <Variable xsi:type="robot:TInteger" Value="300"/>
+        </Condition2>
+        <Condition1 xsi:type="robot:Value">
+          <Variable xsi:type="robot:Sensor"/>
+        </Condition1>
+      </Condition>
+    </Operations>
     <Operations xsi:type="robot:Backward" duration="1.0"/>
+    <Operations xsi:type="robot:TurnLeft"/>
   </Sequence>
 </robot:Mission>

@@ -5,20 +5,18 @@
       <Value xsi:type="robot:TFloat" Value="300.0"/>
     </Operations>
     <Operations xsi:type="robot:Event">
-      <At xsi:type="robot:Alternative">
-        <Consequence xsi:type="robot:TurnRight"/>
-        <Alternative xsi:type="robot:TurnLeft"/>
-        <Condition xsi:type="robot:Compare">
-          <Operator xsi:type="robot:Different"/>
-          <Condition2 xsi:type="robot:Value">
-            <Variable xsi:type="robot:Sensor" name="distanceFLF"/>
-          </Condition2>
-          <Condition1 xsi:type="robot:Value">
-            <Variable xsi:type="robot:Sensor"/>
-          </Condition1>
-        </Condition>
-      </At>
+      <At xsi:type="robot:Backward" duration="0.2"/>
       <Onleave xsi:type="robot:Sequence">
+        <Operations xsi:type="robot:Sleep" duration="0.3"/>
+        <Operations xsi:type="robot:TurnLeft" duration="0.5"/>
+        <Operations xsi:type="robot:Sleep" duration="0.3"/>
+        <Operations xsi:type="robot:TurnRight" duration="1.0"/>
+        <Operations xsi:type="robot:Sleep" duration="0.3"/>
+        <Operations xsi:type="robot:TurnLeft" duration="0.5"/>
+        <Operations xsi:type="robot:Sleep" duration="1.0"/>
+        <Operations xsi:type="robot:TurnLeft" duration="1.0"/>
+        <Operations xsi:type="robot:Sleep" duration="0.3"/>
+        <Operations xsi:type="robot:Backward" duration="0.2"/>
         <Operations xsi:type="robot:Sleep" duration="0.2"/>
         <Operations xsi:type="robot:Forward"/>
       </Onleave>

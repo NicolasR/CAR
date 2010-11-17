@@ -12,6 +12,7 @@ import robot.Condition;
 import robot.Event;
 import robot.Operation;
 import robot.RobotPackage;
+import robot.Value;
 
 /**
  * <!-- begin-user-doc -->
@@ -111,7 +112,10 @@ public class EventImpl extends OperationImpl implements Event {
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
 	
-		returnvalue += indent+"at"+this.getCondition().toUrbiString()+"\n";
+		if(this.getCondition() instanceof Value)
+			returnvalue += indent+"at("+this.getCondition().toUrbiString()+")\n";
+		else
+			returnvalue += indent+"at"+this.getCondition().toUrbiString()+"\n";
 		returnvalue += indent+"{\n";
 		returnvalue += this.getAt().toUrbiString(indent+"\t")+"\n";
 		returnvalue += indent+"}\n";

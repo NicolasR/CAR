@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="ASCII"?>
 <robot:Mission xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:robot="http://robot/1.0" xsi:schemaLocation="http://robot/1.0 robot.ecore">
   <Sequence>
-    <Operations xsi:type="robot:Alternative">
-      <Consequence xsi:type="robot:Forward"/>
-      <Condition xsi:type="robot:Compare">
-        <Operator type="LT"/>
-        <Condition2 xsi:type="robot:Compare">
-          <Operator/>
-          <Condition2 xsi:type="robot:Value">
-            <Variable xsi:type="robot:TInteger" Value="1"/>
-          </Condition2>
-          <Condition1 xsi:type="robot:Value">
-            <Variable xsi:type="robot:TInteger" Value="2"/>
-          </Condition1>
-        </Condition2>
-        <Condition1 xsi:type="robot:Value">
-          <Variable xsi:type="robot:TBoolean" Value="false"/>
-        </Condition1>
+    <Operations xsi:type="robot:While">
+      <Operation xsi:type="robot:Sequence">
+        <Operations xsi:type="robot:Forward" duration="1.0"/>
+        <Operations xsi:type="robot:TurnLeft" duration="0.5"/>
+        <Operations xsi:type="robot:Backward" duration="1.0"/>
+        <Operations xsi:type="robot:TurnRight" duration="0.5"/>
+        <Operations xsi:type="robot:Backward" duration="1.0"/>
+        <Operations xsi:type="robot:TurnLeft" duration="0.5"/>
+        <Operations xsi:type="robot:Forward" duration="1.0"/>
+        <Operations xsi:type="robot:TurnRight" duration="0.5"/>
+      </Operation>
+      <Condition xsi:type="robot:Value">
+        <Variable xsi:type="robot:TBoolean" Value="true"/>
       </Condition>
     </Operations>
   </Sequence>

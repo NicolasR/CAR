@@ -61,7 +61,7 @@ public class ConditionImpl extends CDOObjectImpl implements Condition {
 	*/
 	public String toUrbiString() {
 		if (this instanceof Value)
-			return ((Value)this).toUrbiString();
+			return "("+((Value)this).toUrbiString()+")";
 		else if (this instanceof Compare)
 			return ((Compare)this).toUrbiString();
 		else

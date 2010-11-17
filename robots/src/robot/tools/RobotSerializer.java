@@ -73,6 +73,7 @@ public class RobotSerializer {
 				System.out.println("Generate Urbi for "+string);
 				
 				//Appel de la méthode generate de la classe générée par JET
+				System.out.println(string);
 				File mission = new File(srcdir+"/"+string);
 				writer.write(urbicode.generate(load(mission)));
 				writer.close();

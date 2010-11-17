@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import robot.Condition;
 import robot.Operation;
 import robot.RobotPackage;
+import robot.Value;
 import robot.Whenever;
 
 /**
@@ -110,8 +111,10 @@ public class WheneverImpl extends OperationImpl implements Whenever {
 	*/
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
-	
-		returnvalue += indent+"whenever"+this.getCondition().toUrbiString()+"\n";
+		if(this.getCondition() instanceof Value)
+			returnvalue += indent+"whenever("+this.getCondition().toUrbiString()+")\n";
+		else
+			returnvalue += indent+"whenever"+this.getCondition().toUrbiString()+"\n";
 		returnvalue += indent+"{\n";
 		returnvalue += this.getWhenever().toUrbiString(indent+"\t")+"\n";
 		returnvalue += indent+"}\n";

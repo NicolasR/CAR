@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import robot.Condition;
 import robot.Operation;
 import robot.RobotPackage;
+import robot.Value;
 import robot.While;
 
 /**
@@ -91,8 +92,10 @@ public class WhileImpl extends OperationImpl implements While {
 	*/
 	public String toUrbiString(String indent) {
 		String returnvalue = "";
-	
-		returnvalue += indent+"while"+this.getCondition().toUrbiString()+"\n";
+		if(this.getCondition() instanceof Value)
+			returnvalue += indent+"while("+this.getCondition().toUrbiString()+")\n";
+		else
+			returnvalue += indent+"while"+this.getCondition().toUrbiString()+"\n";
 		returnvalue += indent+"{\n";
 		returnvalue += this.getOperation().toUrbiString(indent+"\t")+"\n";
 		returnvalue += indent+"};\n";
